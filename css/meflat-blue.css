@@ -280,11 +280,11 @@ a:focus,
     letter-spacing:0.01em;
     text-transform:uppercase;
     background:transparent;
-    color:#fff; 
+    color:#fff;
 }
 
 #main-nav.scrolled .nav a{
-    color:inherit; 
+    color:inherit;
 }
 
 #main-nav li{
@@ -383,7 +383,7 @@ a:focus,
 
 .jumbotron.bg-image {
     position: relative;
-    background:url(../assets/header.jpg) 50% 50% no-repeat;
+    background:url(../assets/desk.jpeg) 50% 50% no-repeat;
     background-size: cover;
 }
 
@@ -520,11 +520,11 @@ a:focus,
     text-decoration:none;
 }
 
-.flex-direction-nav a:hover {  
+.flex-direction-nav a:hover {
     background:#363B46;
 }
 
-.flex-direction-nav .flex-disabled {  
+.flex-direction-nav .flex-disabled {
     display:none;
 }
 
@@ -533,7 +533,7 @@ a:focus,
 
 /*----------------------
 -----Services Styles----
-------------------------*/  
+------------------------*/
 .services .item {
     text-align:center;
     margin-bottom:30px;
@@ -563,7 +563,7 @@ a:focus,
 }
 /*----------------------
 -----Featured Project----
-------------------------*/  
+------------------------*/
 .img-wrapper {
     position:relative;
     width:100%;
@@ -606,7 +606,7 @@ a:focus,
 
 /*----------------------
 -----About Styles----
-------------------------*/  
+------------------------*/
 
 #about .section-header{
     margin-bottom:40px;
@@ -664,14 +664,14 @@ a:focus,
 
 /*----------------------
 -----Portfolio Styles----
-------------------------*/ 	
+------------------------*/
 #filter-works ul {
     list-style:none;
     padding:0;
     margin:0;
     margin-bottom:40px;
     text-align:center;
-    
+
 }
 
 #filter-works ul li{
@@ -833,8 +833,8 @@ a:focus,
       -ms-transition-duration: 0.7s;
        -o-transition-duration: 0.7s;
           transition-duration: 0.7s;
-          
-   transition-timing-function:ease-in-out;    
+
+   transition-timing-function:ease-in-out;
 }
 
 .masonry {
@@ -942,7 +942,7 @@ a:focus,
 
 .modal-body .project-descr{
     margin:0 0 24px;
-    
+
 }
 
 .modal-header .loader {
@@ -1027,7 +1027,7 @@ a:focus,
 }
 /*----------------------
 -----Dribbble Styles----
-------------------------*/    
+------------------------*/
 .dribbble-button {
     display:block;
     text-align:center;
@@ -1086,7 +1086,7 @@ a:focus,
     .bl_form {
       margin: 0 0 40px;
     }
-    
+
     .bl_form input,
     .bl_form textarea{
       padding-top: 15px;
@@ -1128,7 +1128,7 @@ a:focus,
       color: #FFF;
 	  z-index:1;
     }
-	
+
 .no-placeholder .lb_label {
 	display:none;
 }
@@ -1167,7 +1167,7 @@ a:focus,
 }
 /*----------------------
 -----Footer Styles------
-------------------------*/    
+------------------------*/
 
 #main-footer p{
     font-size:16px;
@@ -1355,13 +1355,13 @@ a:focus,
 
 /*----------------------
 -----Media Queries------
-------------------------*/    
+------------------------*/
 @media (max-width: 767px) {
-	
+
     .navbar {
         padding:0 20px;
     }
-    
+
     #main-nav {
         background:#fff;
         box-shadow:0 1px 2px rgba(0,0,0,0.1);
@@ -1371,36 +1371,36 @@ a:focus,
 		display:block;
         text-align:center;
 	}
-	
+
 	#main-nav .nav a:before {
 		display:none;
 	}
-	
+
 	#main-nav .navbar-nav #logo{
 		display:none;
 	}
-	
+
     #main-nav .nav a{
-        color:inherit; 
+        color:inherit;
         transition:color .2s ease-out;
     }
 
 	#main-nav .nav .active a,
 	#main-nav .nav a:hover{
-        color:#38A5DB; 
+        color:#38A5DB;
     }
-    
+
     .jumbotron .text-col{
         text-align:center;
         margin-bottom:30px;
         margin-top:0;
     }
-    
+
     #main-footer [class*=row],
     #main-footer .text-right{
         text-align:center;
     }
-    
+
     .section-header h1{
         font-size:38px;
     }
