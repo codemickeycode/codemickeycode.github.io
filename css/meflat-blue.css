@@ -828,11 +828,11 @@ a:focus,
 
 .masonry,
 .masonry .masonry-brick {
-  -webkit-transition-duration: 0.10s;
-     -moz-transition-duration: 0.10s;
-      -ms-transition-duration: 0.10s;
-       -o-transition-duration: 0.10s;
-          transition-duration: 0.10s;
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
 
    transition-timing-function:ease-in-out;
 }
