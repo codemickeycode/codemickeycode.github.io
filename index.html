@@ -1,324 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>codemickeycode | Software Engineer</title>
-        <!-- Favicons-->
-        <link rel="shortcut icon" href="assets/images/favicon.png">
-        <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
-        <!-- Web Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Suranna" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css">
-        <!-- Bootstrap core CSS-->
-        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Icon Fonts-->
-        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-        <link href="assets/css/themify-icons.css" rel="stylesheet">
-        <!-- Plugins-->
-        <link href="assets/css/magnific-popup.css" rel="stylesheet">
-        <link href="assets/css/vertical.min.css" rel="stylesheet">
-        <!-- Template core CSS-->
-        <link href="assets/css/template.css" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Preloader-->
-        <div class="page-loader">
-            <div class="loader">Loading...</div>
-        </div>
-        <!-- Preloader end-->
-        <!-- Show menu-->
-        <div class="show-menu-btn">
-			<span></span>
-			<span></span>
-			<span></span>
-        </div>
-        <!-- Show menu end-->
-        <!-- Menu-->
-        <div class="overlay-menu">
-            <div class="menu-table">
-                <div class="menu-table-cell">
-                    <ul class="navigation">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="talks-and-workshops.html">Talks & Workshops</a></li>
-<!--                         <li><a href="resume.html">Resume</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Journal</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="shortcodes.html">Shortcodes</a></li>
-                        <li class="menu-item-has-children"><a href="index.html">Submenu</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Item 1</a></li>
-                                <li><a href="#">Item 2</a></li>
-                                <li><a href="#">Item 3</a></li>
-                                <li><a href="#">Item 4</a></li>
-                            </ul>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>codemickeycode</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link href="assets/css/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <!-- Retina Images Plugin -->
+    <script src="assets/js/plugins/retina/retina.min.js"></script>
+
+    <!-- Plugin CSS -->
+    <link href="assets/css/plugins/hover/hover.min.css" rel="stylesheet">
+    <link href="assets/css/plugins/owl.carousel/owl.carousel.css" rel="stylesheet">
+    <link href="assets/css/plugins/owl.carousel/owl.theme.css" rel="stylesheet">
+    <link href="assets/css/plugins/owl.carousel/owl.transitions.css" rel="stylesheet">
+    <link href="assets/css/plugins/jquery.fs.wallpaper/jquery.fs.wallpaper.css" rel="stylesheet">
+    <link href="assets/css/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Spectrum CSS -->
+    <!-- Note: spectrum.css is the default blue theme. To use another theme, uncomment the one you want and delete the rest, including the default spectrum.css! -->
+    <!-- <link href="assets/css/spectrum.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-aqua.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-coffee.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-coral.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-lavender.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-olive.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-orange.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-peach.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-pink.css" rel="stylesheet"> -->
+    <link href="assets/css/spectrum-purple.css" rel="stylesheet"> 
+    <!-- <link href="assets/css/spectrum-rust.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-seafoam.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-slate.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-turquoise.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/spectrum-yellow.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-dark navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#page-top">
+                        <span class="logo">
+                            <!--<img src="assets/img/logo.png" alt="">-->
+                        </span>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li class="page-scroll">
+                            <a href="#about">About</a>
+                        </li>
+<!--                         <li class="page-scroll">
+                            <a href="#services">Services</a>
                         </li> -->
+                        <li class="page-scroll">
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+<!--                          <li class="page-scroll">
+                            <a href="#testimonials">Testimonials</a>
+                        </li>-->
+                        <li class="page-scroll">
+                            <a href="#contact">Contact</a>
+                        </li> 
                     </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <header class="intro-img intro-dark-bg" style="background-image: url(assets/img/demo-bgs/calatagan-bg.jpg)" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="intro-body" data-scrollreveal="move 0">
+                <div class="container">
+                    <div class="intro-welcome">Hi, my name is</div>
+                    <br>
+                    <h1 class="brand-heading">Micaela<br>Reyes<!-- <span class="text-primary">Reyes</span> --></h1>
+                    <hr class="light">
+                    <div class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <h4>I'm a Software Engineer & Data Analyst.</h4>
+                            </div>
+                            <div class="item">
+                                <h4>I live and work out of Makati, Philippines</h4>
+                            </div>
+                            <div class="item">
+                                <h4>I'm passionate about data-driven insights and coffee.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
+                        <a href="#about" class="btn btn-scroll-light sink">
+                            <i class="fa fa-angle-double-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="about-2">
+            <div class="container">
+                <div class="row" data-scrollreveal="enter left">
+                    <div class="col-lg-4 col-lg-offset-1">
+                        <img src="assets/img/demo-portraits/portrait-2.jpg" class="img-circle img-responsive img-centered dark-faded-border" alt="">
+                    </div>
+                    <div class="col-lg-5 text-justify" data-scrollreveal="enter right">
+                        <h2>About Me</h2>
+                        <hr class="primary">
+                        <p>I'm a <strong>software engineer</strong> with 15 years of experience, specializing in <strong>backend and web development</strong>. Recently, my interest has shifted to <strong>data analytics</strong>, aiming to tackle social disparities and promote <strong>economic empowerment</strong> through <strong>technology education</strong>. My journey into data analytics is not just a career transition; it's a mission to harness data for meaningful impact.</p>
+
+                        <p>I blend my <strong>software development skills</strong> with a strong <strong>entrepreneurial mindset</strong> to succeed in data analysis.</p>
+                        <p>Feel free to connect with me on linkedin, explore my
+                            <span class="page-scroll"><a href="#portfolio"><strong>past projects</strong></a></span>,
+                            or <span class="page-scroll"><a href="#contact"><strong>contact me</strong></a></span> now if you're ready to get started!</p>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn btn-social-dark btn-linkedin">
+                                    <i class="fa fa-fw fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio-1 bg-lighter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" data-scrollreveal="move 0">
+                        <h2>Portfolio</h2>
+                        <hr class="primary">
+                        <ul class="list-inline" id="filters">
+                            <li>
+                                <button data-filter="*" type="button" class="btn btn-primary btn-square btn-raised">All</button>
+                            </li>
+                            <li>
+                                <button data-filter=".data" type="button" class="btn btn-primary btn-square btn-raised">Data-Driven Solutions</button>
+                            </li>
+                            <li>
+                                <button data-filter=".academic" type="button" class="btn btn-primary btn-square btn-raised">Academic Projects</button>
+                            </li>
+                            <li>
+                                <button data-filter=".software" type="button" class="btn btn-primary btn-square btn-raised">Web and Software Development</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" data-scrollreveal="enter bottom">
+                    <div class="isotope">
+                        <div class="col-sm-4 portfolio-item data">
+                            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/1.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item academic">
+                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/2.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item software">
+                            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/3.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item data">
+                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/4.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item academic">
+                            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/5.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item software">
+                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/6.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item data">
+                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/7.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item academic">
+                            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/8.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                        <div class="col-sm-4 portfolio-item software">
+                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
+                                <div class="caption">
+                                    <div class="caption-content">
+                                        <h3><i class="fa fa-search fa-2x"></i>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <img src="assets/img/demo-portfolio/9.jpg" class="img-centered" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section id="contact" class="contact-1 bg-parallax-light" style="background-image: url(assets/img/demo-bgs/freelancer-contact.jpg);" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row" data-scrollreveal="move 0">
+                    <div class="col-lg-12 text-center">
+                        <h2>Let's Get In Touch</h2>
+                        <p>codemickeycode@gmail.com</p>
+                    </div>
+                </div>
+                <div class="row" data-scrollreveal="enter bottom">
+                    <div class="col-lg-8 col-lg-offset-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-2 bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2 class="script">Thanks for visiting my website!</h2>
+                        <p>Code. Passion. Freedom. Making a Difference.</p>
+                    </div>
+   <!--                  <div class="col-md-3 col-md-offset-1">
+                        <h3 class="script">Find me!</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn btn-social-light btn-facebook"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social-light btn-twitter"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social-light btn-dribbble"><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-social-light btn-google-plus"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                        </ul>
+                        <br>
+                    </div> -->
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Standard Portfolio Modal - Images and Text -->
+    <div id="portfolio-modal-1" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row first">
+                    <div class="col-lg-12">
+                        <h2 class="page-header">Project Name</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div id="project-details-carousel" class="owl-carousel owl-theme">
+
+                            <div class="item">
+                                <img src="assets/img/demo-portfolio/10.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/demo-portfolio/11.jpg" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/demo-portfolio/12.jpg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Project Description:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, et, ea, accusantium reprehenderit aliquam numquam fuga natus fugiat odit distinctio illo at unde.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iusto molestiae possimus sint dignissimos! Laudantium, dolore, vel, sint, labore optio perferendis illo dolorum similique soluta eum cupiditate assumenda consequatur maiores.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Project Details:</h3>
+                        <ul class="list-unstyled project-details">
+                            <li>
+                                <strong>Client:</strong>Lorem Ipsum</li>
+                            <li>
+                                <strong>Services:</strong>Web Design, Photography</li>
+                            <li>
+                                <strong>Date:</strong>January 2015</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Menu end-->
-        <div class="wrapper">
-            <!-- Hero section-->
-            <section class="split-image parallax" data-background="assets/images/hero-image.jpg">
-                <div class="split-image-footer">
-                    <ul class="split-list">
-                        <li><a href="talks-and-workshops.html">Talks & Workshops</a></li>
-                    </ul>
+    </div>
+
+    <!-- Standard Portfolio Modal - Video and Text -->
+    <div id="portfolio-modal-2" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
                 </div>
-            </section>
-            <!-- Hero section end-->
-            <!-- Content section-->
-            <section class="split-content">
-                <!-- Hello text-->
-                <section class="module">
-                    <div class="container-fluid container-custom">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h1>Hello, I'm Micaela Reyes<br>Software Engineer and Data Analyst.</h1>
-
-                                <p><strong><i>Code. Passion. Freedom. Making a Difference.</i></strong></p>
-
-                                <p>I am a software engineer with 15 years of experience, specializing in <strong>backend and web development</strong>. Recently, my interest has shifted to <strong>data analytics</strong>, aiming to tackle social disparities and promote <strong>economic empowerment</strong> through technology education.
-                                </p>
-
-                                <p>
-                                Along with my team at <a href="https://codehappy.ph"><strong>CodeHappy.ph</strong></a>, we provide specialized Python training that emphasizes <strong>practical data skills</strong> and <strong>core software engineering</strong> principles.
-                                </p>
-
-                                <p>In the Python community, I'm quite active. I serve as the Director of Operations for <a href="https://python.ph"><strong>Python Philippines (PythonPH) </strong></a>, mentor at <strong>PyLadies Manila</strong>, an active participant in the <a href="https://pycon.asia"><strong>PyCon APAC</strong></a> community, and a <a href="https://www.python.org/psf/fellows-roster/"><strong>Python Software Foundation fellow</strong></a>. For me, it's all about people coming together to do cool stuff with technology.
-
-                                <p>
-                                My approach to life combines <strong>practicality with idealism</strong>, driving me to confront and reshape established norms in my areas of passion.
-                                </p>
-                            </div>
-                        </div>
+            </div>
+            <div class="container">
+                <div class="row first">
+                    <div class="col-lg-12">
+                        <h2 class="page-header">Project Name</h2>
                     </div>
-                </section>
-                <section class="module" id="the-future-of-technology">
-                    <div class="container-fluid container-custom">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2>The Future of Technology</h2>
-                                <hr class="m-b-50">
-                                <p>I dream of a future wherein humans have advanced greater than the advancement of technology; wherein technology has already become an extension of ourselves. Not a future wherein we're always overwhelmed by it.</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <iframe src="http://player.vimeo.com/video/87701971?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" style="border: none;"></iframe>
                     </div>
-                </section>
-                <!-- Hello text end-->
-                <!-- Tabs-->
-                <section class="module" id="life-work-community">
-                    <div class="container-fluid container-custom">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2>Life, Work and Community</h2>
-                                <hr class="m-b-50">
-                                <!-- Tabs-->
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#tab-1" data-toggle="tab">Life</a></li>
-                                    <li><a href="#tab-2" data-toggle="tab">Work</a></li>
-                                    <li><a href="#tab-3" data-toggle="tab">Community</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane in active" id="tab-1">
-                                        <p>I love coffee, good food, reading, walking and going on adventures.</p>
-                                        <p>I've also been watching Naruto a lot lately. My favorite character is Shikamaru and the line <i>"Death is not the end. It's the loss of conviction that is."</i> :D</p>
-                                        <p>Fun fact: I'm an introvert but I love having friends. I love meeting people who are passionate about their craft, getting inspired and learning something from them.</p>
-                                    </div>
-                                    <div class="tab-pane"  id="tab-2">
-                                        <p>I'm on a personal mission to teach Programming and Software Development for the future generation of tech professionals and leaders in the Philippines.
-                                        </p>
-                                        <p>
-                                        So together with my husband, I started a Python training company called CodeHappy. I believe this is one area of focus where I'm able to do just that while promoting software craftsmanship and fostering healthy engineering cultures. :)
-                                        </p>
-                                    </div>
-                                    <div class="tab-pane" id="tab-3">
-                                        <p>I love creating "safe spaces" where people get to do things that feed their souls and bond with other humans.
-                                        </p>
-                                        <p>
-                                        I also like contributing to causes I care about in my small corner of the world in the most practical way I can.
-                                        </p>
-                                        <h3>Python Community</h3>
-                                        <h6>- How I contribute:</h6>
-                                        <p><strong>I spend a lot of my free time as a volunteer for PythonPH</strong> doing admin work, handling overall operations, and coaching and mentoring the next gen leaders so we can continue to <strong>organize meaningful events and programs for the tech community</strong> in an enjoyable and sustainable way.</p>
-                                        <h6>- Why I contribute?</h6>
-                                        <p>I first got introduced to <strong>Python and the world of open source</strong> when I attended my first PyCon PH in 2012. Since then, several amazing things happened. The community also became my most reliable support system throughout my career.</p>
-                                        <p>I discovered that <strong>tech is a very democratizing career</strong>, <strong>skills pay the bills</strong>, and that there are <strong>lots of crazy cool people in the Python and open source community</strong>.</p>
-                                        <p>
-                                        It just feels good to be part of that ecosystem and give back :)
-                                        </p>
-                                    </div>
-                                </div>
-                                <!-- END TABS-->
-                            </div>
-                        </div>
+                    <div class="col-md-4">
+                        <h3>Project Description:</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, et, ea, accusantium reprehenderit aliquam numquam fuga natus fugiat odit distinctio illo at unde.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, iusto molestiae possimus sint dignissimos! Laudantium, dolore, vel, sint, labore optio perferendis illo dolorum similique soluta eum cupiditate assumenda consequatur maiores.</p>
                     </div>
-                </section>
-
-
-                <!-- Tabs-->
-                <section class="module" id="recommendations">
-                    <div class="container-fluid container-custom">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <h2>Random stuff I personally recommend...</h2>
-                                <hr class="m-b-50">
-                                <!-- Tabs-->
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#tab-101" data-toggle="tab">Books</a></li>
-                                    <li><a href="#tab-102" data-toggle="tab">Coffee</a></li>
-                                    <li><a href="#tab-103" data-toggle="tab">Music</a></li>
-                                    <li><a href="#tab-104" data-toggle="tab">Podcasts</a></li>
-                                    <li><a href="#tab-105" data-toggle="tab">Developer Tools</a></li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane in active" id="tab-101">
-                                        <h3>Non-Tech</h3>
-                                        <ul>
-                                            <li>- Essentialism by Greg McKeown</li>
-                                            <li>- Ikigai: The Japanese Secret to a Long and Happy Life by Héctor García and Frances Miralles</li>
-                                            <li>- Company of One by Paul Jarvis</li>
-                                            <li>- The Dip: A Little Book That Teaches You When to Quit (and When to Stick) by Seth Godin</li>
-                                            <li>- The Hard Thing About Hard Things by Ben Horowitz</li>
-                                            <li>- Invest Your Way to Financial Freedom: A simple guide to everything you need to know by Ben Carlson and Robin Powell</li>
-                                            <li>- The Simple Path to Wealth by JL Collins</li>
-                                            <li>- The Almanack of Naval Ravikant: A Guide to Wealth and Happiness by Eric Jorgenson</li>
-                                        </ul>
-
-                                        <h3>Tech</h3>
-                                        <ul>
-                                            <li>- The Passionate Programmer by Chad Fowler</li>
-                                            <li>- Soft Skills: The Software Developer's Life Manual by John Sonmez</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-pane" id="tab-102">
-                                        <h3>Beans</h3>
-                                        <ul>
-                                            <li>- Kenya</li>
-                                            <li>- Kilimanjaro</li>
-                                            <li>- Costa Rica</li>
-                                            <li>- Indonesia Kalosi</li>
-                                            <li>- Indian Monsoon</li>
-                                            <li>- Ethiopia Geisha</li>
-                                            <li>- Colombia Supremo</li>
-                                            <li>- Mt. Apo</li>
-                                            <li>- Sagada</li>
-                                        </ul>
-
-                                        <h3>Cold Coffee Drinks</h3>
-                                        <ul>
-                                            <li>- Dirty Horchata</li>
-                                            <li>- Black Sesame Latte</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-pane" id="tab-103">
-                                        <h3>Playlists</h3>
-                                        <ul>
-                                            <li>- Carole and Tuesday</li>
-                                            <li>- Naruto Shippuden Openings</li>
-                                            <li>- Coffee Shop Vibes</li>
-                                            <li>- Lo-Fi Cafe</li>
-                                            <li>- This is Idealism</li>
-                                        </ul>
-
-                                        <h3>Artists</h3>
-                                        <ul>
-                                            <li>- Dicta License</li>
-                                            <li>- Malay</li>
-                                            <li>- Gwen Stefani</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-pane" id="tab-104">
-                                        <h3>Podcasts</h3>
-                                        <ul>
-                                            <li>- Talk Python to Me by Michael Kennedy</li>
-                                            <li>- Python Bytes by Brian Okken and Michael Kennedy</li>
-                                            <li>- Teaching Python by Kelly Paredes and Sean Tibor</li>
-                                        </ul>
-                                    </div>
-                                    <div class="tab-pane" id="tab-105">
-                                        <p>
-                                            <ul>
-                                                <li>Oliver Queen : <i>Ray, when I'm out in the field, my bow, my arrows, those are just tools. I'm the weapon.</i></li>
-                                                <li>Ray Palmer : <i>That's poetic.</i></li>
-                                                <li>Oliver Queen : <i>My point is that if you rely on your suit more than you rely on yourself... it's going to get you killed.</i></li>
-                                                <li>~Arrow</li>
-                                            </ul>
-                                        </p>
-                                        </br>
-                                        <h3>Programming Language: Python (version 3.7 and above)</h3>
-                                        <p>Python is my programming language of choice for work and hobby projects because it's very powerful yet still simple, practical and fun to use.</p>
-                                        <p>I mainly use Python for web development and scripting.</p>
-                                        <p>For a start, if you want to learn its basic syntax, you can follow these tutorials:</p>
-                                        <ul>
-                                            <li>- <a href="talks-and-workshops.html#magic-carpet-python">A Magic Carpet Ride to Python</a> - 30-min to 1-hour quick introduction of what Python is and its many possibilities + code labs and exercises for the very basic syntax.</li>
-                                            <li>- <a href="https://www.py4e.com/lessons">Python for Everybody</a> - if you want to take what you learned a little bit further.</li>
-                                        </ul>
-                                        <p>You can also check out this video: <a href="talks-and-workshops.html#top-concerns-of-python-beginners">Top Concerns of Python Beginners</a> (Taglish) if you're still trying to decide if Python is the right tool for you.</p>
-
-                                        <h3>Web Development Framework: Django</h3>
-                                        <p>Django is my go-to web development framework because it allows me to build web apps from scratch faster. Also, when working with teams, I just find the code easier to maintain when I use it since the framework is very opinionated and has very good documentation.</p>
-                                        <p>For a start, if you want to learn how to build a simple web app using Django, you can follow this tutorial:</p>
-                                        <ul>
-                                            <li>- <a href="https://tutorial.djangogirls.org">Django Girls Tutorial</a></li>
-                                        </ul>
-
-                                        <h3>Text Editor: Sublime Text 3</h3>
-                                        <p>I don't use an IDE because I wanted to train myself to be productive without needing a "crutch". Vim is too hardcore for me so I chose Sublime Text instead - it's light and simple enough to have all the necessary stuff I need (syntax highlighting, set indentation (tab) to 4 spaces and show whitespaces).</p>
-                                        <p>If you want to try using Sublime Text, you can download it from <a href="https://www.sublimetext.com">sublimetext.com</a></p>
-                                        <p>You can also copy my Sublime Text settings <a href="https://gist.github.com/codemickeycode/08bc31595ab65d8fbad4e7a0f0268c6b">here</a>.</p>
-
-                                        <h3>Operating System: Linux (Ubuntu 20.4 LTS)</h3>
-                                        <p>I've used Ubuntu for my dev machine since I started learning Python in 2012 because at that time, I found that most Python tutorials use Linux in the examples.</p>
-                                        <p>I had to force myself to setup an Ubuntu VM so I can use it whenever I practice writing code in Python. Then eventually, I set it up as my main OS because my 3rd job required me to use an Ubuntu dev machine.</p>
-                                        <p>In the end, switching to Linux was a good thing because it forced me to become comfortable using the command-line.</p>
-
-                                        <h3>Version Control System: Git</h3>
-                                        <p>I first discovered Git at PyCon Philippines 2012. I started using it ever since I started to collaborate with other people on PythonPH projects. This was also required at my 3rd job and onwards. It's a great tool!</p>
-                                    </div>
-                                </div>
-                                <!-- END TABS-->
-                            </div>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Project Details:</h3>
+                        <ul class="list-unstyled project-details">
+                            <li>
+                                <strong>Client:</strong>Lorem Ipsum</li>
+                            <li>
+                                <strong>Services:</strong>Web Design, Photography</li>
+                            <li>
+                                <strong>Date:</strong>January 2015</li>
+                        </ul>
                     </div>
-                </section>
-
-                <!-- Counters end-->
-                <!-- Footer-->
-                <footer class="footer">
-                    <div class="container-fluid container-custom">
-                        <div class="row">
-                            <div class="col-md-7">
-                                <p>© 2021 codemickeycode</p>
-                            </div>
-                            <div class="col-md-5">
-                                <ul class="social-list">
-                                    <li><a href="https://twitter.com/codemickeycode"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="https://ph.linkedin.com/in/codemickeycode"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="https://github.com/codemickeycode"><i class="fa fa-github fa-fw"></i></a></li>
-                                    <li><a href="https://blog.codemickeycode.com/"><i class="fa fa-pencil fa-fw"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-                <!-- Footer end-->
-            </section>
-            <!-- Content section end-->
+                </div>
+            </div>
         </div>
-        <!-- Scripts-->
-        <script src="assets/js/jquery-2.2.4.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q"></script>
-        <script src="assets/js/plugins.min.js"></script>
-        <script src="assets/js/custom.min.js"></script>
-        <!-- Color Switcher (Remove these lines)-->
-<!--         <script src="assets/js/style-switcher.min.js"></script> -->
-    </body>
+    </div>
+
+    <!-- Core JavaScript Files -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.custom.js"></script>
+
+    <!-- Plugin JavaScript Files -->
+    <script src="assets/js/plugins/jquery.easing/jquery.easing.1.3.js"></script>
+    <script src="assets/js/plugins/jquery.fitvids/jquery.fitvids.js"></script>
+    <script src="assets/js/plugins/jquery.fs.wallpaper/jquery.fs.wallpaper.min.js"></script>
+    <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/plugins/jquery.tubular/jquery.tubular.1.0.js"></script>
+    <script src="assets/js/plugins/owl.carousel/owl.carousel.min.js"></script>
+    <script src="assets/js/plugins/scrollReveal/scrollReveal.js"></script>
+    <script src="assets/js/plugins/stellar/stellar.js"></script>
+    <script src="assets/js/plugins/SmoothScroll/SmoothScroll.js"></script>
+    <script src="assets/js/plugins/jqBootstrapValidation/jqBootstrapValidation.js"></script>
+    <script src="assets/js/contact_me.js"></script>
+    <script src="assets/js/plugins/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Spectrum JavaScript Files -->
+    <script src="assets/js/spectrum.nav.js"></script>
+    <script src="assets/js/spectrum.js"></script>
+
+</body>
+
 </html>
