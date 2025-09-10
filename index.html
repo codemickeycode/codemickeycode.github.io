@@ -1,772 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micaela Reyes – Personal Site</title>
+  <meta name="description" content="Micaela Reyes – Software Engineer · Program Manager · Open Source Community Builder. Portfolio, talks, blog links, accomplishments." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #5a5a5a;
+      --accent: #1e88e5;
+      --accent-2: #a855f7;
+      --card: #f7f7f8;
+      --border: #e6e6e8;
+      --maxw: 1024px;
+      --radius: 14px;
+      --shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0c0c0f;
+        --text: #f3f4f6;
+        --muted: #b0b3b8;
+        --accent: #7cb2ff;
+        --accent-2: #c084fc;
+        --card: #15161a;
+        --border: #24262b;
+        --shadow: 0 6px 24px rgba(0,0,0,.35);
+      }
+    }
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font: 16px/1.6 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-    <title>codemickeycode</title>
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
 
-    <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-    <!-- Fonts -->
-    <link href="assets/css/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    /* Header */
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(120%) blur(8px); background: #673AB7; border-bottom: 1px solid var(--border); color: #fff;}
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .brand { font-weight: bold; }
+    .menu { display: flex; gap: 16px; }
+    .menu a { color: #fff; opacity: 0.9; text-decoration: none; }
 
-    <!-- Retina Images Plugin -->
-    <script src="assets/js/plugins/retina/retina.min.js"></script>
+    /* Hero */
+    .hero { padding: 60px 0; text-align: center; }
+    .hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin: 0; }
+    .motto { font-size: 1.2rem; font-weight: 700; background: #673AB7; -webkit-background-clip: text; color: transparent; margin-top: 8px; }
+    .roles { color: var(--muted); margin-top: 4px; }
 
-    <!-- Plugin CSS -->
-    <link href="assets/css/plugins/hover/hover.min.css" rel="stylesheet">
-    <link href="assets/css/plugins/owl.carousel/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/plugins/owl.carousel/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/plugins/owl.carousel/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/plugins/jquery.fs.wallpaper/jquery.fs.wallpaper.css" rel="stylesheet">
-    <link href="assets/css/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+    .quicklinks { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .chip { background: var(--card); padding: 6px 12px; border-radius: 999px; box-shadow: var(--shadow); }
 
-    <!-- Spectrum CSS -->
-    <!-- Note: spectrum.css is the default blue theme. To use another theme, uncomment the one you want and delete the rest, including the default spectrum.css! -->
-    <!-- <link href="assets/css/spectrum.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-aqua.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-coffee.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-coral.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-lavender.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-olive.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-orange.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-peach.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-pink.css" rel="stylesheet"> -->
-    <link href="assets/css/spectrum-purple.css" rel="stylesheet"> 
-    <!-- <link href="assets/css/spectrum-rust.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-seafoam.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-slate.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-turquoise.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/spectrum-yellow.css" rel="stylesheet"> -->
+    section { padding: 40px 0; }
+    section h2 { font-family: 'Poppins', sans-serif; margin-bottom: 12px; }
+    .lead { color: var(--muted); margin-bottom: 16px; }
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    .grid { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin-top: 0; font-size: 1.1rem; }
+
+    footer {
+      padding: 48px 0 72px; background: #673AB7; width: 100%; margin: 0; color: #fff;  text-align: center;
+    }
+
+    /* --- Career Journey Timeline --- */
+    /* Horizontal timeline */
+    .timeline-horizontal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .timeline-horizontal .step {
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+
+    .timeline-horizontal .circle {
+      width: 36px;
+      height: 36px;
+      margin: 0 auto 8px;
+      background: var(--accent-2);
+      color: #fff;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      box-shadow: var(--shadow);
+    }
+
+    .timeline-horizontal .title {
+      font-weight: 600;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .timeline-horizontal .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .timeline-horizontal .line {
+      flex: 0 0 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-2), var(--accent));
+      border-radius: 2px;
+    }
+
+    .card p {
+      overflow: visible;
+      white-space: normal;
+      text-overflow: unset;
+    }
+
+    .card.link {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card.link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.12);
+    }
+    .card.link a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .affil-badges {
+      margin: 12px auto 0;
+      display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+    }
+    .affil-badge {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 999px; padding: 8px 12px; text-decoration: none; color: inherit;
+      box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .affil-badge:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+    .affil-badge img { width: 28px; height: 28px; border-radius: 50%; }
+    .affil-name { font-weight: 600; line-height: 1; }
+    .affil-meta { font-size: .86rem; color: var(--muted); line-height: 1.2; }
+
+  </style>
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <div id="wrapper">
-
-        <nav class="navbar navbar-dark navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="#page-top">
-                        <span class="logo">
-                            <!--<img src="assets/img/logo.png" alt="">-->
-                        </span>
-                    </a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden">
-                            <a href="#page-top"></a>
-                        </li>
-                        <li class="page-scroll">
-                            <a href="#about">About</a>
-                        </li>
-<!--                         <li class="page-scroll">
-                            <a href="#services">Services</a>
-                        </li> -->
-                        <li class="page-scroll">
-                            <a href="#portfolio">Portfolio</a>
-                        </li>
-                        <li>
-                            <a href="https://slides.com/codemickeycode">Talks</a>
-                        </li>
-<!--                          <li class="page-scroll">
-                            <a href="#testimonials">Testimonials</a>
-                        </li>-->
-                        <li class="page-scroll">
-                            <a href="#contact">Contact</a>
-                        </li> 
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-
-        <header class="intro-img intro-dark-bg" style="background-image: url(assets/img/demo-bgs/calatagan-bg.jpg)" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="intro-body" data-scrollreveal="move 0">
-                <div class="container">
-                    <div class="intro-welcome">Hi, my name is</div>
-                    <br>
-                    <h1 class="brand-heading">Micaela<br>Reyes<!-- <span class="text-primary">Reyes</span> --></h1>
-                    <hr class="light">
-                    <div class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <h4>I'm a Software Engineer & Data Analyst.</h4>
-                            </div>
-                            <div class="item">
-                                <h4>I live and work out of Makati, Philippines</h4>
-                            </div>
-                            <div class="item">
-                                <h4>I'm passionate about data-driven insights and coffee.</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="page-scroll" data-scrollreveal="enter bottom after .6s">
-                        <a href="#about" class="btn btn-scroll-light sink">
-                            <i class="fa fa-angle-double-down"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section id="about" class="about-2">
-            <div class="container">
-                <div class="row" data-scrollreveal="enter left">
-                    <div class="col-lg-4 col-lg-offset-1">
-                        <img src="assets/img/demo-portraits/portrait-2.jpg" class="img-circle img-responsive img-centered dark-faded-border" alt="">
-                    </div>
-                    <div class="col-lg-5 text-justify" data-scrollreveal="enter right">
-                        <h2>About Me</h2>
-                        <hr class="primary">
-                        <p>I'm a <strong>software engineer</strong> with 15+ years of experience, passionate about using <strong>data analytics</strong> to solve business and social challenges. I am deeply involved in the Python community—a Fellow of the Python Software Foundation, and serving as the Director of Operations for <strong><a href="https://python.ph">Python Philippines (PythonPH)</a></strong>.
-                        </p>
-
-                        <p>I blend my <strong>software development skills</strong> with a strong <strong>entrepreneurial mindset</strong> to succeed in data analysis.</p>
-
-                        <p>🛠️ <strong>Tools I Use</strong>: Linux, Python, SQL, Excel, Tableau</p>
-
-                        <p>Let's connect! Explore <span class="page-scroll"><a href="#portfolio"><strong>my projects</strong></a></span>, add me on LinkedIn, or <a href="#contact"><strong>email me</strong>.</p>
-
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.linkedin.com/in/codemickeycode/" class="btn btn-social-dark btn-linkedin">
-                                    <i class="fa fa-fw fa-linkedin"></i>
-                                </a>
-                            </li>
-<!--                             <li>
-                                <a href="https://blog.codemickeycode.com" class="btn btn-social-dark btn-pencil">
-                                    <i class="fa fa-fw fa-pencil"></i>
-                                </a>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio-1 bg-lighter">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center" data-scrollreveal="move 0">
-                        <h2>Portfolio</h2>
-                        <p>Check out some examples of my projects here:</p>
-                        <hr class="primary">
-                        <ul class="list-inline" id="filters">
-                            <li>
-                                <button data-filter="*" type="button" class="btn btn-primary btn-square btn-raised">All</button>
-                            </li>
-                            <li>
-                                <button data-filter=".data" type="button" class="btn btn-primary btn-square btn-raised">Data-Driven Solutions</button>
-                            </li>
-                            <li>
-                                <button data-filter=".academic" type="button" class="btn btn-primary btn-square btn-raised">Academic Projects</button>
-                            </li>
-                            <li>
-                                <button data-filter=".software" type="button" class="btn btn-primary btn-square btn-raised">Web and Software Development</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row" data-scrollreveal="enter bottom">
-                    <div class="isotope">
-                        <div class="col-sm-4 portfolio-item data">
-                            <a href="#portfolio-modal-1" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>PyCon PH 2024 Event Analysis using Python<!-- <i class="fa fa-search fa-2x"> --></i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-event-report2024.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                        <div class="col-sm-4 portfolio-item data">
-                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>PyCon PH 2023 Event Analysis using Python<!-- <i class="fa fa-search fa-2x"> --></i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-event-report.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                        <div class="col-sm-4 portfolio-item data">
-                            <a href="#portfolio-modal-3" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>Data Strategy for PythonPH</i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-datastrategy.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                       <div class="col-sm-4 portfolio-item software">
-                            <a href="#portfolio-modal-4" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>PyCon APAC Organizers Website (pycon.asia)</i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-pycon-asia.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                        <div class="col-sm-4 portfolio-item software">
-                            <a href="#portfolio-modal-5" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>PyCert: Automated Certificate Generator and Emailer for PyCon PH</i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-pycert.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                         <div class="col-sm-4 portfolio-item academic">
-                            <a href="#portfolio-modal-6" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>FoodHub Order Analysis using Python</i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-foodhub.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-                         <div class="col-sm-4 portfolio-item academic">
-                            <a href="#portfolio-modal-7" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>New Wheels Data Analysis using SQL
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-new-wheels.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-<!--                         <div class="col-sm-4 portfolio-item data">
-                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3><i class="fa fa-search fa-2x"></i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-placeholder.jpg" class="img-centered" alt="">
-                            </a>
-                        </div> -->
-                         <div class="col-sm-4 portfolio-item academic">
-                            <a href="#portfolio-modal-8" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3>Gamers Arena Data Visualization using Tableau
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/project-gamers-arena.jpg" class="img-centered" alt="">
-                            </a>
-                        </div>
-<!--                        <div class="col-sm-4 portfolio-item software">
-                            <a href="#portfolio-modal-2" class="portfolio-link" data-toggle="modal">
-                                <div class="caption">
-                                    <div class="caption-content">
-                                        <h3><i class="fa fa-search fa-2x"></i>
-                                        </h3>
-                                    </div>
-                                </div>
-                                <img src="assets/img/demo-portfolio/9.jpg" class="img-centered" alt="">
-                            </a>
-                        </div> -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                <section id="contact" class="contact-1 bg-parallax-light" style="background-image: url(assets/img/demo-bgs/freelancer-contact.jpg);" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <div class="row" data-scrollreveal="move 0">
-                    <div class="col-lg-12 text-center">
-                        <h2>Let's Get In Touch</h2>
-                        <p>codemickeycode@gmail.com</p>
-                    </div>
-                </div>
-                <div class="row" data-scrollreveal="enter bottom">
-                    <div class="col-lg-8 col-lg-offset-2">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer-2 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <h2 class="script">Thanks for visiting my website!</h2>
-                        <p>Code. Passion. Freedom. Making a Difference.</p>
-                    </div>
-                    <div class="col-md-3 col-md-offset-1">
-                        <h3 class="script">Find me!</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="https://www.linkedin.com/in/codemickeycode/" class="btn btn-social-light btn-linkedin"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/codemickeycode" class="btn btn-social-light btn-twitter"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/codemickeycode" class="btn btn-social-light btn-github"><i class="fa fa-fw fa-github"></i></a>
-                            </li>
-                            <li>
-                                <a href="https://blog.codemickeycode.com" class="btn btn-social-light btn-pencil"><i class="fa fa-fw fa-pencil"></i></a>
-                            </li>
-                        </ul>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Micaela Reyes</div>
+      <nav class="menu">
+        <a href="#about">About</a>
+        <a href="#talks">Talks</a>
+        <a href="#accomplishments">Accomplishments</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-1" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">PyCon PH 2024 Event Report</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div id="project-details-carousel" class="owl-carousel owl-theme">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-event-report2024-large.jpg" alt="">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p><strong>Data Analysis and Visualization:</strong></br>Analyzed attendee data using Python to support data-driven planning and reporting.</p>
-                        <p>Utilized Pandas, Matplotlib, and Seaborn for data aggregation and visualization to enhance interpretability and engagement with stakeholders.</p>
-                        <p><strong>Reporting:</strong></br>Created a detailed PDF slide deck report featuring charts and key insights, aimed at improving the event each year based on defined success metrics.</p>
-                        <p><a href="https://drive.google.com/file/d/1say12ODKoBBFN9CWLfxoBQWnF6b1Abfh/view?usp=sharing" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Python, Pandas, Matplotlib, Seaborn + Canva</li>
-                            <li>
-                                <strong>Date: </strong>September 2024</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="container hero">
+    <h1>Micaela Reyes</h1>
+    <div class="motto">Code. Passion. Freedom. Making a Difference.</div>
+    <p class="roles">Open Source Community Builder · Software Engineer · Director of Operations at PythonPH · PSF Fellow</p>
+    <div class="quicklinks">
+      <a class="chip" href="https://blog.codemickeycode.com/">Blog</a>
+      <a class="chip" href="https://github.com/codemickeycode">GitHub</a>
+      <a class="chip" href="https://slides.com/codemickeycode">Slides</a>
+      <a class="chip" href="https://www.linkedin.com/in/codemickeycode">LinkedIn</a>
+      <a class="chip" href="https://twitter.com/codemickeycode">Twitter/X</a>
+    </div>
+    <div class="affil-badges">
+      <a class="affil-badge" href="https://python.ph" target="_blank" rel="noopener">
+<!--         <img src="https://via.placeholder.com/28x28.png?text=Py" alt="PythonPH"> -->
+        <div>
+          <div class="affil-name">PythonPH</div>
+          <div class="affil-meta">Board of Trustee • 2013–present</div>
         </div>
-    </div>
-
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-2" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">PyCon PH 2023 Event Report</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="item">
-                            <img src="assets/img/demo-portfolio/project-event-report-large.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p><strong>Data Analysis and Visualization:</strong></br>Analyzed attendee data using Python to support data-driven planning and reporting.</p>
-                        <p>Utilized Pandas, Matplotlib, and Seaborn for data aggregation and visualization to enhance interpretability and stakeholder engagement.</p>
-                        <p><strong>Reporting:</strong></br>Created a detailed PDF slide deck report, featuring charts that provide insights and observations aimed at strategic decision-making. This report was presented to a non-profit grants committee to aid in their assessment and funding decisions.</p>
-                        <p><a href="https://drive.google.com/file/d/1wsaOTkuJlyOVQt3_b2uDadyuJl2kWgSZ/view?usp=sharing" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Python, Pandas, Matplotlib, Seaborn + Canva</li>
-                            <li>
-                                <strong>Date: </strong>October 2023</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      </a>
+      <a class="affil-badge" href="https://pyladiesmanila.github.io" target="_blank" rel="noopener">
+<!--         <img src="https://via.placeholder.com/28x28.png?text=PL" alt="PyLadies Manila"> -->
+        <div>
+          <div class="affil-name">PyLadies Manila</div>
+          <div class="affil-meta">Mentor • 2015–present</div>
         </div>
+      </a>
     </div>
+  </div>
 
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>I’m a software engineer turned ecosystem builder, working at the intersection of <strong>technology and social impact</strong>. As <strong>Program Coordinator of the Technical Resource Lab (TRL) at Ateneo</strong>, I co-lead efforts to advance <strong>Digital Public Infrastructure (DPI)</strong>—reimagining identity, payments, and data exchage systems so they serve the public in more inclusive and accessible ways.</p>
+        <p>I also serve as <strong>Director of Operations at Python Philippines (PythonPH)</strong> and am a <strong>Python Software Foundation Fellow</strong>, where I’ve spent years nurturing grassroots leadership and building sustainable, volunteer-driven systems.</p>
+        <p>At my core, I use my Python background and open source values to <strong>catalyze change—bridging technology, community, and impact. I like to defy the odds for the things I truly care about:</strong></p>
+        <ul>
+          <li>Open Source</li>
+          <li>Women in Tech</li>
+          <li>Economic empowerment through skills and access</li>
+          <li>Building technology that puts people first</li>
+        </ul>
 
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-3" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
+        <div class="career-journey">
+          <h3 style="margin:20px 0 12px 0; font-family:'Poppins',sans-serif;">Career Journey</h3>
+          <div class="timeline-horizontal">
+            <div class="step">
+              <div class="circle">1</div>
+              <p class="title">Software Engineer</p>
+              <p class="meta">(Web &amp; Backend)</p>
             </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">Data Strategy for PythonPH</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="item">
-                            <img src="assets/img/demo-portfolio/project-datastrategy-large.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>Developed a data strategy that established a roadmap for data-driven decision-making within the organization.</p>
-                        <p>Analyzed data usage and integrated technology to improve business outcomes and set data management guidelines.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Canva</li>
-                            <li>
-                                <strong>Date: </strong>August 2023</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="line"></div>
+            <div class="step">
+              <div class="circle">2</div>
+              <p class="title">Data Strategy &amp; Analytics</p>
+              <p class="meta">Courses &amp; Projects applied at PythonPH</p>
             </div>
+            <div class="line"></div>
+            <div class="step">
+              <div class="circle">3</div>
+              <p class="title">Program Management</p>
+              <p class="meta">Philanthropic · GovTech · DPI</p>
+            </div>
+          </div>
         </div>
-    </div>
+
+      </div>
+    </section>
+
+    <!-- Removed Blog section -->
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <div class="grid grid-2" id="featuredTalks"></div>
+      <!-- Talks Archive removed -->
+    </section>
+
+    <!-- Removed Projects section -->
+
+    <section id="accomplishments">
+      <h2>Accomplishments</h2>
+      <div class="grid grid-3" id="accomplishmentsGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div>Code. Passion. Freedom. Making a Difference.</div>
+    <div>© <span id="year"></span> Micaela Reyes</div>
+  </footer>
+
+  <script>
+    // Data
+    const featuredTalks = [
+      { title: 'PythonPH) One Does Not Simply Create a Lasting Tech Community', event: 'PyCon TW 2023', videoId: 'FFmIaazm__I', slides: '#'},
+      { title: 'Panel Discussion: Challenges for Women Working in Technology - Panel Discussion ', event: 'PyLadiesCon 2024', videoId: '8YRFPvOOStU', slides: '#'}
+    ];
+
+    const accomplishments = [
+      { title: 'PSF Community Service Award', meta: 'April 2025', desc: 'Received 2025 Q1 Community Service Award from The Python Software Foundation...', url: 'https://www.python.org/community/awards/psf-awards/#april-2025' },
+      { title: 'Python Software Foundation Fellow', meta: 'Aug 2019', desc: 'Honored with a Fellowship by the Python Software Foundation...', url: 'http://pyfound.blogspot.com/2019/08/python-software-foundation-fellow.html' }
+    ];
+
+    // Helpers
+    const ytThumb = id => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
+    // Renderers
+    function renderFeaturedTalks() {
+      const wrap = document.getElementById('featuredTalks');
+      featuredTalks.forEach(t => {
+        const url = t.slides !== '#' ? t.slides : `https://www.youtube.com/watch?v=${t.videoId}`;
+        const card = document.createElement('div');
+        card.className = 'card link';
+        card.innerHTML = `
+          <a href="${url}" target="_blank" rel="noopener">
+            <div class="thumb"><img src="${ytThumb(t.videoId)}" alt="${t.title}"></div>
+            <h3>${t.title}</h3>
+            <div class="meta">${t.event}</div>
+          </a>`;
+        wrap.appendChild(card);
+      });
+    }
 
 
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-4" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">PyCon APAC Organizers Website</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-pycon-asia-large.jpg" alt="">
-                            </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>A platform where folks can conveniently access information about the Regional PyCons in APAC, all on a single page.</p>
-                        <p>Been collaborating with some awesome folks from the APAC community on this, and it's been an exciting journey so far.</p>
-                        <p><a href="https://github.com/PyConAPAC/PyConAPAC.github.io">Pull requests</a> are welcome! :)</p>
-                        <p><a href="https://pycon.asia" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>JavaScript, HTML, CSS</li>
-                            <li>
-                                <strong>Date: </strong>November 2021</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-5" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">PyCert: Automated Certificate Generator and Emailer for PyCon PH</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-pycert-large.jpg" alt="">
-                            </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>This script, developed for PyCon PH 2015, automates the creation and emailing of attendance certificates. It processes a CSV file with attendee names and emails, generates PDF certificates, and sends them to each participant.</p>
-                        <p>Due to its efficiency, it has been used annually to distribute certificates to hundreds of attendees.</p>
-                        <p><a href="https://github.com/codemickeycode/pycert" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Python (reportlab, smtplib, csv)</li>
-                            <li>
-                                <strong>Date: </strong>July 2015</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    function renderAccomplishments() {
+      const wrap = document.getElementById('accomplishmentsGrid');
+      accomplishments.forEach(a => {
+        const card = document.createElement('div');
+        card.className = 'card link';
+        card.innerHTML = `
+          <a href="${a.url || '#'}" target="_blank" rel="noopener">
+            <h3>${a.title}</h3>
+            <div class="meta">${a.meta}</div>
+            <p>${a.desc}</p>
+          </a>`;
+        wrap.appendChild(card);
+      });
+    }
 
 
-
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-6" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">FoodHub Order Analysis using Python</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-foodhub-large.jpg" alt="">
-                            </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>In this academic project, I assumed the role of a Data Scientist for FoodHub, a hypothetical food aggregator company. The company provided a dataset detailing customer orders placed through their online portal, seeking to derive actionable business insights.</p>
-                        <p>Objective:
-                            <ul>
-                                <li>Conduct a detailed analysis of the order data to answer specific questions from the Data Science team, aiming to uncover trends and behaviors that could inform strategic business improvements.</li>
-                            </ul>
-                        <p>
-                        <p>Utilizing Python, I analyzed the data to identify key insights that could enhance customer satisfaction and operational efficiency. This project showcases my ability to apply Python in practical data analytics scenarios, providing the foundation for data-driven decision-making in a business context.</p>
-
-                        <p><a href="https://eportfolio.mygreatlearning.com/micaela-reyes" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Python, Pandas, Matplotlib, Seaborn</li>
-                            <li>
-                                <strong>Date: </strong>October 2023</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-7" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">New Wheels Data Analysis using SQL</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-new-wheels-large.jpg" alt="">
-                            </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>In this project, I tackled the challenge presented by New-Wheels, a company experiencing a steady decline in sales and a drop in new customer acquisition due to negative online feedback and ratings.</p>
-                        <p>Objectives:
-                            <ul>
-                                <li>Utilize MySQL to organize and analyze the data to address specific business questions.</li>
-                                <li>Create data visualizations from the analyzed data.</li>
-                                <li>Provide actionable recommendations and insights in the Quarterly Business Report for executive leadership.</li>
-                            </ul>
-                        </p>
-                        <p>This case study showcases my ability to transform raw data into valuable business insights, driving strategic decisions to improve customer satisfaction and company performance.</p>
-                        <p><a href="https://drive.google.com/file/d/1oCpiVGJE_Q8uL-Vp4AiMQtnqBVPdsNo9/view?usp=sharing" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>SQL, Excel, Powerpoint</li>
-                            <li>
-                                <strong>Date: </strong>September 2023</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Standard Portfolio Modal - Images and Text -->
-    <div id="portfolio-modal-8" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row first">
-                    <div class="col-lg-12">
-                        <h2 class="page-header">Gamers Arena Data Visualization using Tableau</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-
-                            <div class="item">
-                                <img src="assets/img/demo-portfolio/project-gamers-arena-large.jpg" alt="">
-                            </div>
-
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Project Description:</h3>
-                        <p>This project focused on Gamers' Arena, a website that provides detailed information about video games, including releases and sales data across various platforms and genres. Recently, the company introduced a subscription model allowing gamers to play a limited number of games monthly.</p>
-                        <p>Objective:
-                            <ul>
-                                <li>Design an interactive Tableau dashboard to monitor key performance indicators (KPIs) crucial for assessing the health and effectiveness of the new subscription sales model.</li>
-                            </ul>
-                        </p>
-                        <p>The dashboard I created enables the director to visually track subscription metrics, analyze user engagement, and make data-driven decisions to optimize the subscription strategy. This project highlights my ability to leverage Tableau for strategic business storytelling and operational oversight.
-                        </p>
-
-                        <p><a href="https://public.tableau.com/app/profile/codemickeycode/viz/GamersArenaProject_16926468920470/GamersArenaDashboard" class="button">View Project</a></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <h3>Project Details:</h3>
-                        <ul class="list-unstyled project-details">
-                            <li>
-                                <strong>Tools Used: </strong>Tableau</li>
-                            <li>
-                                <strong>Date: </strong>August 2023</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <!-- Core JavaScript Files -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-    <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
-
-    <!-- Plugin JavaScript Files -->
-    <script src="assets/js/plugins/jquery.easing/jquery.easing.1.3.js"></script>
-    <script src="assets/js/plugins/jquery.fitvids/jquery.fitvids.js"></script>
-    <script src="assets/js/plugins/jquery.fs.wallpaper/jquery.fs.wallpaper.min.js"></script>
-    <script src="assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/plugins/jquery.tubular/jquery.tubular.1.0.js"></script>
-    <script src="assets/js/plugins/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/js/plugins/scrollReveal/scrollReveal.js"></script>
-    <script src="assets/js/plugins/stellar/stellar.js"></script>
-    <script src="assets/js/plugins/SmoothScroll/SmoothScroll.js"></script>
-    <script src="assets/js/plugins/jqBootstrapValidation/jqBootstrapValidation.js"></script>
-    <script src="assets/js/contact_me.js"></script>
-    <script src="assets/js/plugins/isotope/isotope.pkgd.min.js"></script>
-
-    <!-- Spectrum JavaScript Files -->
-    <script src="assets/js/spectrum.nav.js"></script>
-    <script src="assets/js/spectrum.js"></script>
-
+    // Init
+    renderFeaturedTalks();
+    renderAccomplishments();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
-
 </html>
