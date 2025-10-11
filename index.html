@@ -8,13 +8,19 @@
   <meta name="description" content="Micaela Reyes – Software Engineer · Program Manager · Open Source Community Builder. Portfolio, talks, blog links, accomplishments." />
   <style>
     :root {
+      /* Color Pallette */
       --bg: #ffffff;
       --text: #111111;
       --muted: #5a5a5a;
-      --accent: #1e88e5;
-      --accent-2: #a855f7;
+      --accent: #1e88e5; /* Blue */
+      --accent-2: #a855f7; /* Purple */
       --card: #f7f7f8;
       --border: #e6e6e8;
+      /* Primary Brand Color for Header/Footer */
+      --primary: #673AB7; /* Deep Purple */
+      --primary-text: #ffffff;
+
+      /* Layout & Effects */
       --maxw: 1024px;
       --radius: 14px;
       --shadow: 0 6px 24px rgba(0,0,0,.06);
@@ -29,6 +35,9 @@
         --card: #15161a;
         --border: #24262b;
         --shadow: 0 6px 24px rgba(0,0,0,.35);
+        /* Dark Mode Primary Color */
+        --primary: #38006b;
+        --primary-text: #f3f4f6;
       }
     }
 
@@ -46,51 +55,138 @@
     .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
     /* Header */
-    header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(120%) blur(8px); background: #673AB7; border-bottom: 1px solid var(--border); color: #fff;}
-    .nav { display: flex; justify-content: space-between; align-items: center; }
+    header {
+      position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(120%) blur(8px);
+      background: var(--primary); /* Use variable */
+      border-bottom: 1px solid var(--border);
+      color: var(--primary-text); /* Use variable */
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; height: 60px; }
     .brand { font-weight: bold; }
     .menu { display: flex; gap: 16px; }
-    .menu a { color: #fff; opacity: 0.9; text-decoration: none; }
+    .menu a { color: var(--primary-text); opacity: 0.9; text-decoration: none; }
+    .menu a:hover { opacity: 1; text-decoration: underline; }
 
     /* Hero */
-    .hero { padding: 60px 0; text-align: center; }
-    .hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.2rem; margin: 0; }
-    .motto { font-size: 1.2rem; font-weight: 700; background: #673AB7; -webkit-background-clip: text; color: transparent; margin-top: 8px; }
+    .hero { padding: 40px 0 60px; text-align: center; }
+    .profile-pic { /* New style for profile image */
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+      display: block;
+    }
+    .hero h1 { font-family: 'Poppins', sans-serif; font-size: 2.5rem; margin: 0; }
+    .motto { font-size: 1.2rem; font-weight: 700; background: var(--primary); -webkit-background-clip: text; color: transparent; margin-top: 8px; }
     .roles { color: var(--muted); margin-top: 4px; }
 
     .quicklinks { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .chip { background: var(--card); padding: 6px 12px; border-radius: 999px; box-shadow: var(--shadow); }
-
-    section { padding: 40px 0; }
-    section h2 { font-family: 'Poppins', sans-serif; margin-bottom: 12px; }
-    .lead { color: var(--muted); margin-bottom: 16px; }
-
-    .grid { display: grid; gap: 16px; }
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
-    .card h3 { margin-top: 0; font-size: 1.1rem; }
-
-    footer {
-      padding: 48px 0 72px; background: #673AB7; width: 100%; margin: 0; color: #fff;  text-align: center;
+    .chip {
+      background: var(--card); padding: 6px 12px; border-radius: 999px;
+      box-shadow: var(--shadow); text-decoration: none; color: inherit;
+      font-weight: 500;
     }
 
-    /* --- Career Journey Timeline --- */
-    /* Horizontal timeline */
+    section { padding: 40px 0; }
+    section h2 { font-family: 'Poppins', sans-serif; margin-bottom: 16px; font-size: 1.8rem; }
+    .lead { color: var(--muted); margin-bottom: 16px; }
+
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { margin-top: 0; font-size: 1.2rem; font-family: 'Poppins', sans-serif; }
+
+    /* Card link with hover effect */
+    .card.link {
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card.link:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,.12);
+    }
+    .card.link a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+    /* YouTube Thumbnail Styling with Play Button Overlay */
+    .card .thumb {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      line-height: 0; /* Fixes extra space below image */
+    }
+    .card .thumb img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .card.link:hover .thumb img {
+      transform: scale(1.05);
+    }
+    .card .thumb::after {
+      content: "▶";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 40px;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.8);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+
+    /* Footer */
+    footer {
+      padding: 48px 0 72px;
+      background: var(--primary); /* Use variable */
+      width: 100%; margin: 0;
+      color: var(--primary-text); /* Use variable */
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    footer div:first-child { font-weight: 500; margin-bottom: 8px; }
+
+
+    /* --- Career Journey Timeline (Responsive Refactor) --- */
     .timeline-horizontal {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-top: 20px;
-      gap: 20px;
-      flex-wrap: wrap;
+      margin-top: 24px;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    /* The connecting line */
+    .timeline-horizontal::before {
+      content: '';
+      position: absolute;
+      top: 18px; /* Align with circle center */
+      left: 10px;
+      right: 10px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-2), var(--accent));
+      z-index: 1;
     }
 
     .timeline-horizontal .step {
       text-align: center;
       flex: 1;
-      min-width: 180px;
+      min-width: 120px;
+      position: relative;
+      z-index: 2;
+      background: var(--card); /* To hide the line behind the step content */
+      padding: 0 8px;
     }
 
     .timeline-horizontal .circle {
@@ -105,61 +201,78 @@
       justify-content: center;
       border-radius: 50%;
       box-shadow: var(--shadow);
+      flex-shrink: 0;
     }
 
     .timeline-horizontal .title {
       font-weight: 600;
       margin: 0;
       font-family: 'Poppins', sans-serif;
+      line-height: 1.3;
+      min-height: 40px; /* Ensures consistent vertical alignment */
     }
 
     .timeline-horizontal .meta {
       font-size: 0.9rem;
       color: var(--muted);
-      margin: 0;
+      margin: 0 0 4px 0;
     }
 
-    .timeline-horizontal .line {
-      flex: 0 0 50px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent-2), var(--accent));
-      border-radius: 2px;
+    /* Mobile: Vertical Timeline Stack */
+    @media (max-width: 650px) {
+      .timeline-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 10px 0;
+      }
+      .timeline-horizontal::before {
+        top: 0;
+        bottom: 0;
+        left: 17px; /* Vertical line aligned with circle center */
+        width: 3px;
+        height: auto;
+        background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      }
+      .timeline-horizontal .step {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        min-width: 100%;
+        margin-bottom: 24px;
+        padding: 0;
+        background: transparent;
+      }
+      .timeline-horizontal .step > * {
+        margin: 0 0 0 16px; /* Offset text from circle */
+      }
+      .timeline-horizontal .title { min-height: auto; margin-bottom: 4px; }
+      .timeline-horizontal .meta { font-size: 0.8rem; margin-bottom: 0; }
+      .timeline-horizontal .circle { margin: 0; }
     }
 
-    .card p {
-      overflow: visible;
-      white-space: normal;
-      text-overflow: unset;
-    }
 
-    .card.link {
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card.link:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 28px rgba(0,0,0,.12);
-    }
-    .card.link a {
-      color: inherit;
-      text-decoration: none;
-      display: block;
-    }
-
-
+    /* Affiliation Badges */
     .affil-badges {
-      margin: 12px auto 0;
+      margin: 24px auto 0; /* Increased margin-top */
       display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
     }
     .affil-badge {
       display: flex; align-items: center; gap: 10px;
       background: var(--card); border: 1px solid var(--border);
-      border-radius: 999px; padding: 8px 12px; text-decoration: none; color: inherit;
+      border-radius: 999px; padding: 8px 16px 8px 8px; /* Adjusted padding to accommodate icon */
+      text-decoration: none; color: inherit;
       box-shadow: var(--shadow); transition: transform .18s ease, box-shadow .18s ease;
     }
     .affil-badge:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
-    .affil-badge img { width: 28px; height: 28px; border-radius: 50%; }
-    .affil-name { font-weight: 600; line-height: 1; }
+    .affil-icon-placeholder {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--accent-2); /* Use accent-2 for icon background */
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.8rem; font-weight: bold; flex-shrink: 0;
+      border: 2px solid var(--accent-2);
+    }
+    .affil-name { font-weight: 600; line-height: 1.1; }
     .affil-meta { font-size: .86rem; color: var(--muted); line-height: 1.2; }
 
   </style>
@@ -177,6 +290,7 @@
   </header>
 
   <div class="container hero">
+<!--         <img class="profile-pic" src="https://via.placeholder.com/120x120.png?text=MR" alt="Micaela Reyes Profile Picture"> -->
     <h1>Micaela Reyes</h1>
     <div class="motto">Code. Passion. Freedom. Making a Difference.</div>
     <p class="roles">Open Source Community Builder · Software Engineer · Director of Operations at PythonPH · PSF Fellow</p>
@@ -189,14 +303,14 @@
     </div>
     <div class="affil-badges">
       <a class="affil-badge" href="https://python.ph" target="_blank" rel="noopener">
-<!--         <img src="https://via.placeholder.com/28x28.png?text=Py" alt="PythonPH"> -->
+<!--         <div class="affil-icon-placeholder">Py</div> -->
         <div>
           <div class="affil-name">PythonPH</div>
           <div class="affil-meta">Board of Trustee • 2013–present</div>
         </div>
       </a>
       <a class="affil-badge" href="https://pyladiesmanila.github.io" target="_blank" rel="noopener">
-<!--         <img src="https://via.placeholder.com/28x28.png?text=PL" alt="PyLadies Manila"> -->
+<!--         <div class="affil-icon-placeholder">PL</div> -->
         <div>
           <div class="affil-name">PyLadies Manila</div>
           <div class="affil-meta">Mentor • 2015–present</div>
@@ -209,7 +323,7 @@
     <section id="about">
       <h2>About</h2>
       <div class="card">
-        <p>I’m a software engineer turned ecosystem builder, working at the intersection of <strong>technology and social impact</strong>. As <strong>Program Coordinator of the Technical Resource Lab (TRL) at Ateneo</strong>, I co-lead efforts to advance <strong>Digital Public Infrastructure (DPI)</strong>—reimagining identity, payments, and data exchage systems so they serve the public in more inclusive and accessible ways.</p>
+        <p>I’m a software engineer turned ecosystem builder, working at the intersection of <strong>technology and social impact</strong>. As <strong>Program Coordinator of Ateneo TRL (Technical Resource Lab)</strong>, I co-lead efforts to advance <strong>Digital Public Infrastructure (DPI)</strong>—reimagining identity, payments, and data exchage systems so they serve the public in more inclusive and accessible ways.</p>
         <p>I also serve as <strong>Director of Operations at Python Philippines (PythonPH)</strong>, where I’ve spent years nurturing grassroots leadership and building sustainable, volunteer-driven systems.</p>
         <p>At my core, I use my Python background and open source values to <strong>catalyze change—bridging technology, community, and impact. I like to defy the odds for the things I truly care about:</strong></p>
         <ul>
@@ -227,13 +341,11 @@
               <p class="title">Software Engineer</p>
               <p class="meta">Web &amp; Backend</p>
             </div>
-            <div class="line"></div>
             <div class="step">
               <div class="circle">2</div>
               <p class="title">Data Strategy &amp; Analytics</p>
               <p class="meta">Courses &amp; Projects applied at PythonPH</p>
             </div>
-            <div class="line"></div>
             <div class="step">
               <div class="circle">3</div>
               <p class="title">Program Management</p>
@@ -245,15 +357,10 @@
       </div>
     </section>
 
-    <!-- Removed Blog section -->
-
     <section id="talks">
       <h2>Talks</h2>
       <div class="grid grid-2" id="featuredTalks"></div>
-      <!-- Talks Archive removed -->
     </section>
-
-    <!-- Removed Projects section -->
 
     <section id="accomplishments">
       <h2>Accomplishments</h2>
@@ -269,13 +376,13 @@
   <script>
     // Data
     const featuredTalks = [
-      { title: 'PythonPH) One Does Not Simply Create a Lasting Tech Community', event: 'PyCon TW 2023', videoId: 'FFmIaazm__I', slides: '#'},
+      { title: '(PythonPH) One Does Not Simply Create a Lasting Tech Community', event: 'PyCon TW 2023', videoId: 'FFmIaazm__I', slides: '#'},
       { title: 'Panel Discussion: Challenges for Women Working in Technology - Panel Discussion ', event: 'PyLadiesCon 2024', videoId: '8YRFPvOOStU', slides: '#'}
     ];
 
     const accomplishments = [
-      { title: 'PSF Community Service Award', meta: 'April 2025', desc: 'Received 2025 Q1 Community Service Award from The Python Software Foundation...', url: 'https://www.python.org/community/awards/psf-awards/#april-2025' },
-      { title: 'Python Software Foundation Fellow', meta: 'Aug 2019', desc: 'Honored with a Fellowship by the Python Software Foundation...', url: 'http://pyfound.blogspot.com/2019/08/python-software-foundation-fellow.html' }
+      { title: 'PSF Community Service Award', meta: 'April 2025', desc: 'Received 2025 Q1 Community Service Award from The Python Software Foundation for building, growing and sustaining the Python community in the Philippines by organising conferences, meetups, and volunteer training programs.', url: 'https://www.python.org/community/awards/psf-awards/#april-2025' },
+      { title: 'Python Software Foundation Fellow', meta: 'Aug 2019', desc: 'Honored with a Fellowship by the Python Software Foundation in 2019 for significant contributions to the Python ecosystem in the Philippines.', url: 'http://pyfound.blogspot.com/2019/08/python-software-foundation-fellow.html' }
     ];
 
     // Helpers
@@ -285,6 +392,7 @@
     function renderFeaturedTalks() {
       const wrap = document.getElementById('featuredTalks');
       featuredTalks.forEach(t => {
+        // If slides link is not provided, default to the YouTube video link
         const url = t.slides !== '#' ? t.slides : `https://www.youtube.com/watch?v=${t.videoId}`;
         const card = document.createElement('div');
         card.className = 'card link';
