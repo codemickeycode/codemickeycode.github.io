@@ -145,6 +145,25 @@
       pointer-events: none;
     }
 
+    /* Featured project (Kaizend) */
+    .featured { display: grid; gap: 20px; align-items: start; margin-top: 8px; }
+    @media (min-width: 720px) { .featured { grid-template-columns: 1.3fr 1fr; } }
+
+    .featured .thumb,
+    .featured .proj-thumb { position: relative; overflow: hidden; border-radius: 8px; margin: 0; line-height: 0; }
+
+    .featured img { width: 100%; height: auto; display: block; }
+
+    .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+    .tag { padding: 4px 10px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); font-size: 0.85rem; }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .button {
+      display: inline-block; padding: 10px 14px; border-radius: 10px;
+      text-decoration: none; font-weight: 600; border: 1px solid var(--border);
+      background: #fff; color: var(--text); box-shadow: var(--shadow);
+    }
+    .button.primary { background: var(--primary); color: var(--primary-text); border-color: var(--primary); }
 
     /* Footer */
     footer {
@@ -290,7 +309,7 @@
   </header>
 
   <div class="container hero">
-<!--         <img class="profile-pic" src="https://via.placeholder.com/120x120.png?text=MR" alt="Micaela Reyes Profile Picture"> -->
+<!--         <img class="profile-pic" src="mickey-profile.jpg" alt="Micaela Reyes Profile Picture"> -->
     <h1>Micaela Reyes</h1>
     <div class="motto">Code. Passion. Freedom. Making a Difference.</div>
     <p class="roles">Open Source Community Builder · Software Engineer · Director of Operations at PythonPH · PSF Fellow</p>
@@ -300,6 +319,7 @@
       <a class="chip" href="https://slides.com/codemickeycode">Slides</a>
       <a class="chip" href="https://www.linkedin.com/in/codemickeycode">LinkedIn</a>
       <a class="chip" href="https://twitter.com/codemickeycode">Twitter/X</a>
+
     </div>
     <div class="affil-badges">
       <a class="affil-badge" href="https://python.ph" target="_blank" rel="noopener">
@@ -314,6 +334,12 @@
         <div>
           <div class="affil-name">PyLadies Manila</div>
           <div class="affil-meta">Mentor • 2015–present</div>
+        </div>
+      </a>
+      <a class="affil-badge" href="https://kaizend.org" target="_blank" rel="noopener">
+        <div>
+          <div class="affil-name">Kaizend</div>
+          <div class="affil-meta">Mentor • 2018–present</div>
         </div>
       </a>
     </div>
@@ -349,7 +375,28 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
+    <section id="kaizend">
+      <h2>Featured Project</h2>
+      <div class="featured">
+<!--         <div class="card">
+          <div class="proj-thumb">
+            <img loading="lazy" src="https://via.placeholder.com/1200x675.png?text=Kaizend.org" alt="Kaizend.org screenshot">
+          </div>
+        </div> -->
+        <div class="card">
+          <h3 style="margin:0 0 8px 0; font-family:'Poppins',sans-serif;">PythonPH Kaizend</h3>
+          <p class="lead" style="margin:0 0 10px 0;">
+            A mastermind group and exclusive training program for PythonPH core volunteers. This program is aimed to develop technically competent, well-rounded leaders and systematize succession plans for PythonPH.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="https://kaizend.org" target="_blank" rel="noopener">Visit Kaizend.org</a>
+            <!-- Optional: case study page later -->
+            <!-- <a class="button" href="/kaizend" rel="noopener">Read case study</a> -->
+          </div>
+        </div>
       </div>
     </section>
 
