@@ -294,6 +294,33 @@
     .affil-name { font-weight: 600; line-height: 1.1; }
     .affil-meta { font-size: .86rem; color: var(--muted); line-height: 1.2; }
 
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0;
+    }
+
+    .blog-card .blog-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .blog-card p {
+      color: var(--muted);
+    }
+
+    .blog-card .read-more {
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 12px;
+    }
   </style>
 </head>
 <body>
@@ -378,7 +405,22 @@
       </div>
     </section>
 
-    <section id="kaizend">
+    <section id="blog">
+      <div class="section-heading">
+        <h2>Latest from Micaela's Blog</h2>
+        <a class="button primary" href="https://blog.codemickeycode.com/"
+           target="_blank"
+           rel="noopener">
+          View all posts →
+        </a>
+      </div>
+
+      <div class="grid grid-3" id="latestBlogPosts">
+        <p class="lead">Loading latest posts...</p>
+      </div>
+    </section>
+
+    <section id="featured-project">
       <h2>Featured Project</h2>
       <div class="featured">
 <!--         <div class="card">
@@ -468,10 +510,77 @@
       });
     }
 
+    async function renderLatestBlogPosts() {
+      const wrap = document.getElementById('latestBlogPosts');
+
+      const feedUrl = 'https://blog.codemickeycode.com/feed';
+      const apiUrl =
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`;
+
+      try {
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        wrap.innerHTML = '';
+
+        data.items.slice(0, 3).forEach(post => {
+          const card = document.createElement('div');
+          card.className = 'card link blog-card';
+
+          const date = new Date(post.pubDate).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          });
+
+          const excerpt = stripHtml(post.description)
+            .replace(/\s+/g, ' ')
+            .trim()
+            .slice(0, 180);
+
+          card.innerHTML = `
+            <a href="${post.link}" target="_blank" rel="noopener">
+              <div class="blog-date">${date}</div>
+              <h3>${post.title}</h3>
+              <p>${excerpt}${excerpt.length >= 180 ? '…' : ''}</p>
+              <div class="read-more">Read post →</div>
+            </a>
+          `;
+
+          wrap.appendChild(card);
+        });
+
+      } catch (error) {
+        console.error('Unable to load blog posts:', error);
+
+        wrap.innerHTML = `
+          <div class="card">
+            <p>
+              Unable to load the latest posts right now.
+              <a href="https://blog.codemickeycode.com/">
+                Visit Micaela's blog →
+              </a>
+            </p>
+          </div>
+        `;
+      }
+    }
+
+    function stripHtml(html) {
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      return doc.body.textContent || '';
+    }
 
     // Init
+    renderLatestBlogPosts();
     renderFeaturedTalks();
     renderAccomplishments();
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
