@@ -1,6 +1,6 @@
 codemickeycode.github.io
 ========================
 
-My static website / used to be Pelican Blog
+My static website
 
 http://codemickeycode.github.io
