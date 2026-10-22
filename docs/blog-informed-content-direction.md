@@ -45,11 +45,11 @@ The homepage should answer these questions with specific language:
 
 Suggested positioning:
 
-> I started as a software engineer because I liked building things and understanding how they worked. Over time, I became just as interested in the people, decisions, and systems around the software.
+> I started as a software engineer because I liked building things and understanding how they worked. Over time, I became just as interested in the people, decisions, and systems around the software. Today, I work across technology, programs, and communities.
 
 Suggested connective statement:
 
-> Code gave me a way to build. Community gave me people to build with. Curiosity keeps me asking what the work is for.
+> Coding gave me a way to build. Community gave me people to build with, and the perspective to remember why the work matters.
 
 ## Content Principles
 
