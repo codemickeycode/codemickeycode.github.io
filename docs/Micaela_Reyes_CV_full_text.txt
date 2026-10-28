@@ -1,0 +1,227 @@
+Micaela Reyes
+                                          Makati City
+                                 Website: codemickeycode.com
+
+       Python Software Engineer | Automation & AI-Assisted Development
+
+
+PROFILE
+I'm a technology professional with over 15 years of experience spanning software engineering,
+backend development, and technical program management. My technical background includes Python,
+Django, SQL, APIs, data processing, and cloud-based applications.
+
+Beyond engineering, I've worked closely with business and technical teams to understand complex
+requirements, develop practical solutions, and deliver initiatives from concept to implementation. I've
+recently resumed hands-on coding, experimenting with AI-assisted development using OpenCode and
+OpenAI tools.
+
+
+TECHNICAL SKILLS
+DATA & ANALYTICS                             SOFTWARE ENGINEERING & CLOUD
+   SQL (PostgreSQL, MySQL, Oracle)               Backend: Python, Django, Flask, Pyramid
+   Python (Pandas, NumPy)                        Cloud: AWS Lambda, API Gateway
+   Tableau, Excel (Pivot Tables)                 Tooling: Linux, Shell Scripting, Git
+                                                 APIs: REST API design & integration
+                                                 AI-Assisted Development: OpenCode, OpenAI models
+
+
+ENGINEERING HIGHLIGHTS
+
+    Cloud-Based Analytics: Developed a Contact Center Analytics Dashboard using Python and
+    AWS Lambda, API Gateway, SQS, EventBridge, Cognito, and Timestream to support operational
+    decision-making.
+    Automation & System Integration: Led the development of a centralized event logging and
+    notification system across multiple SaaS products using Python, AWS Lambda, API Gateway, and
+    DynamoDB.
+    API & SaaS Development: Led the development of a Xero Integration SaaS product using Python,
+    Pyramid, Celery, RabbitMQ, and Amazon SQS. The product was recognized as Adobe Business
+    Catalyst's "App of the Month" in July 2017.
+    Data Processing & Workflow Automation: Developed ETL pipelines, automated reporting
+    workflows, and backend scripts using SQL, Oracle PL/SQL, and shell scripting to reduce manual
+    processing work.
+
+
+SELECTED TECHNICAL PROJECTS
+
+
+AI-Assisted Website Development                                                              OCT 2026
+    Revamped pycon.asia (PyCon Asia Directory) and codemickeycode.com (Personal Website)
+    using AI-assisted coding workflows with OpenCode and OpenAI tools.
+
+
+Event Analysis for PyCon PH 2023-2024,                                             OCT 2023, SEP 2024,
+PyCon APAC 2025 & PythonAsia 2026                                                  SEP 2025, APR 2026
+   Analyzed attendee and financial data using Python to support data-driven event planning and
+   enhance stakeholder reporting on impact, participant and sponsor satisfaction.
+   Utilized Pandas, Matplotlib, and Seaborn for data aggregation and visualization to enhance
+   insights and decision-making.
+   Generated comprehensive PDF slide deck reports, featuring charts with insights and
+   observations for strategic decision-making and reporting to a non-profit grants committee.
+
+Data Processing Workshop for an Analytics Team                                                AUG 2023
+    Designed and delivered hands-on Python training for corporate data analysts, covering data
+    preparation, processing, and visualization using Pandas, NumPy, and Matplotlib.
+    Developed practical exercises based on real-world data workflows.
+
+
+ EXPERIENCE
+
+
+ PROGRAM COORDINATOR - DIGITAL PUBLIC INFRASTRUCTURE (DPI),                         FEB 2025 - PRESENT
+ ATENEO DE MANILA UNIVERSITY - TECHNICAL RESOURCE LAB (TRL)
+
+ Technical Program Development & Implementation
+    Joined TRL as its first employee, defining the lab's initial mission, vision, and mandate, and
+    developing its first-year roadmap within 90 days.
+    Directed and managed the development and launch of TRL's public website, translating the lab's
+    purpose, priorities, and initiatives into a public-facing digital presence.
+    Coordinate digital public infrastructure initiatives involving digital identity, payments, and social
+    protection, working with government agencies and international Digital Public Goods (DPG)
+    partners to align technical requirements and implementation activities.
+    Manage the DPI Experience Center prototype, supporting technical demonstrations, system
+    walkthroughs, and practical use cases for government and development partners.
+    Support technical requirements gathering, stakeholder coordination, and implementation planning
+    for National ID adoption and digital social protection initiatives.
+
+ Technical Capacity Building & Solution Demonstrations
+    Helped deliver Python, Django, and AWS technical workshops for Philippine Statistics Authority
+    (PSA) teams, supporting hands-on exercises and technical learning.
+    Led TRL's participation in the ADB Digital Transformation Forum 2025, coordinating multiple DPG
+    teams and volunteers to deliver an integrated DPI demonstration within two weeks.
+
+ CO-FOUNDER & TRAINING ADVISOR, CODEHAPPY.PH                                        APR 2019 – PRESENT
+     Python Training & Technical Capability Building
+        Design and deliver practical Python training programs covering Python fundamentals, data
+        processing, and software development practices for corporate teams and professionals.
+        Develop hands-on exercises and project-based learning activities using Python, Pandas,
+        NumPy, and Matplotlib to help participants apply technical concepts to real-world scenarios.
+        Work with corporate clients to identify technical skill gaps, define learning objectives, and
+        develop customized training programs aligned with business and team requirements.
+        Design assessment frameworks and analyze learner performance data to identify knowledge
+        gaps, evaluate learning outcomes, and recommend targeted improvements.
+        Coordinate training delivery across clients, instructors, and participants, ensuring programs
+        meet technical requirements and learning objectives.
+
+
+PYTHON & AWS DEVELOPER, FULL POTENTIAL SOLUTIONS                            APR 2022 – OCT 2022
+
+   Contact Center Analytics Dashboard
+      Developed a contact center analytics dashboard using Python and AWS services, including
+      Lambda, API Gateway, SQS, EventBridge, Cognito, and Timestream, to support operational
+      efficiency and customer service decision-making.
+      Used Terraform, GitLab CI/CD, and Redis to build scalable and maintainable cloud-based
+      solutions.
+
+FREELANCE BACKEND DEVELOPER,                                                 JUN 2018 – APR 2019
+SELF-EMPLOYED
+
+   Gives.ph — Rewards Module & Merchant API
+       Developed a rewards module and merchant API for a payment organizer platform using
+       Python, Django, and OAuth2.
+       Implemented backend functionality to support merchant integrations, rewards management,
+       and transaction workflows.
+   Kirigami.co — Data Import & Reporting
+       Enhanced data import scripts and reporting modules using Python, Django, and WagtailCMS.
+       Improved backend functionality supporting content management, data processing, and
+       reporting workflows.
+
+SENIOR BACKEND DEVELOPER, COMPLETE BUSINESS ONLINE                           OCT 2016 – APR 2018
+   Centralized Event Logging & Notification System
+      Led the development of a centralized event logging and notification system across multiple
+      SaaS products using Python, Pandas, AWS Lambda, API Gateway, and DynamoDB.
+      Standardized operational workflows and improved application observability, supporting real-
+      time analytics and more efficient system management.
+   Xero Integration SaaS Product
+      Led the development of a Xero integration SaaS product using Python, Pyramid, SQL, Celery,
+      RabbitMQ, and Amazon SQS.
+      Developed backend APIs and asynchronous processing workflows to support integration
+      between business systems.
+      Product recognized as Adobe Business Catalyst's "App of the Month" in July 2017.
+
+SENIOR FULL STACK WEB DEVELOPER, CHANNELFIX.COM                               JAN 2016 – JUL 2016
+   Python/Django Web Product — MVP Development
+      Collaborated with a remote R&D team to design and develop a Python/Django web application
+      from initial concept to working MVP.
+      Designed database structures using Entity-Relationship Diagrams (ERDs) and data modeling
+      techniques.
+      Developed backend APIs, application components, and frontend functionality to support end-
+      to-end product development.
+
+SOFTWARE ENGINEER, FREELANCER.COM                                             SEP 2013 – DEC 2015
+   Marketplace & Growth Engineering
+      Developed and improved marketplace features involving user acquisition, retention, search
+      optimization, and revenue growth.
+      Implemented code for A/B tests, email marketing campaigns, and click tracking to support
+      product experimentation, user acquisition, and retention.
+
+
+      Developed backend scripts for WarriorForum.com to support marketplace integrity, including
+      product filtering and restricted keyword management.
+      Refactored existing code and wrote unit tests for membership-related features.
+
+PROGRAMMER, AUBERON SOLUTIONS                                                   SEP 2012 – SEP 2013
+  ERP & Browser Automation
+    Developed loan management submodules for a finance company's ERP system using Python,
+    OpenERP, and PostgreSQL.
+    Contributed to a web-based task ticketing system for a telecommunications field services
+    company in Belgium.
+    Implemented bug fixes, browser automation, and unit tests using Python and Selenium to
+    support application functionality and reliability.
+
+
+SENIOR SOFTWARE DEVELOPMENT ANALYST,                                             Jul 2008 – Jul 2012
+SMART COMMUNICATIONS
+
+  Business Intelligence & Reporting Automation
+     Enhanced ETL pipelines and business intelligence reporting workflows to support sales and
+     operational decision-making.
+     Developed automated monthly reports and ad hoc data processing scripts using Linux, Shell
+     Scripting, Oracle PL/SQL, and Oracle Reports, reducing manual processing work.
+     Led the development of a satellite phone top-up application using Java, SOAP, HTML, and
+     CSS to streamline customer transactions.
+
+
+AWARDS & RECOGNITION
+
+Python Software Foundation – Community Service Award, APR 2025
+Received 2025 Q1 Community Service Award from The Python Software Foundation for building,
+growing and sustaining the Python community in the Philippines by organizing conferences, meetups,
+and volunteer training programs.
+
+Python Software Foundation – Fellow, AUG 2019
+Honored with a Fellowship by the Python Software Foundation in 2019 for significant contributions to
+the Python ecosystem in the Philippines.
+
+
+EDUCATION
+
+Bachelor of Science in Commerce, Management Information Systems (MIS),
+Assumption College, Makati (JUN 2003 - MAR 2007)
+
+
+CERTIFICATIONS
+
+    Accelerating Digital Public Infrastructure with Safeguards, ITU and UNDP (SEP 2026)
+    Data Analytics Essentials, Texas McCombs School of Business (JUL 2023 - NOV 2023)
+    Data Strategy: Leveraging Data as a Competitive Advantage, UC Berkeley Executive
+    Education (MAR 2022 - JUN 2022)
+
+
+COMMUNITY SERVICE AND VOLUNTEERING
+
+CO-FOUNDER AND BOARD TRUSTEE,                                                  OCT 2013 - PRESENT
+PYTHON PHILIPPINES (PYTHONPH)
+  Co-founded PythonPH, the Philippines’ largest Python developer community, and continue to
+  help shape its strategy, governance, and long-term sustainability.
+  Developed Kaizend, PythonPH’s core volunteer training and engagement program, focused on
+  leadership development, succession planning, and long-term volunteer involvement.
+  Lead the Kaizend Research Program, a year-long technical development initiative for core
+  volunteers that helps participants pursue self-directed projects and deepen their technical skills.
+  Lead and support partnerships, sponsorships, and fundraising with academic institutions,
+  corporate partners, and regional Python communities to support community programs and events.
+  Coordinated cross-cultural and regional initiatives with Python communities across Asia, including
+  PyCon PH, PyCon APAC, PythonAsia, and the Python Asia Organization (PAO).
+  Strengthened relationships with global open-source communities and helped connect PythonPH
+  with broader regional and international ecosystems.
+  Mentored volunteers in technical, leadership, and operational skills; previously served as Director
+  of Operations and Treasurer, and helped establish PythonPH’s early financial systems.
