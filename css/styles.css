@@ -457,3 +457,43 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
   .hero-copy .text-link { width: 100%; justify-content: center; }
   .intent-section { padding: 3rem 0; }
 }
+
+/* Keep recognition visible while giving projects and talks more room. */
+#recognition.section { padding: 4rem 0; }
+#recognition .section-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+#recognition .section-header p { max-width: 34rem; }
+#recognition .numbered-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .85rem;
+  border: 0;
+}
+#recognition .list-item {
+  grid-template-columns: 2rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: .75rem;
+  padding: 1.15rem;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.28);
+}
+#recognition .list-item h3 { font-size: 1.45rem; }
+#recognition .list-item p { margin: .35rem 0 0; font-size: .9rem; line-height: 1.55; }
+#recognition .list-item .arrow { font-size: 1.2rem; }
+
+@media (max-width: 760px) {
+  #recognition.section { padding: 3.5rem 0; }
+  #recognition .section-header { grid-template-columns: 1fr; gap: .75rem; margin-bottom: 1.25rem; }
+  #recognition .numbered-list { grid-template-columns: 1fr; gap: .65rem; }
+}
+
+@media (max-width: 440px) {
+  #recognition.section { padding: 3rem 0; }
+  #recognition .list-item { padding: .9rem; }
+  #recognition .list-item h3 { font-size: 1.25rem; }
+}
