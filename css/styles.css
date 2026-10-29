@@ -665,5 +665,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
     background: #4e7c82;
     color: #f6f1e8;
   }
+  .contact-band h2 { color: #f6f1e8; }
   .contact-band .text-link { color: #f6f1e8; }
 }
