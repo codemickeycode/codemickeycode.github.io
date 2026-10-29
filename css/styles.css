@@ -652,3 +652,18 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
     .project-copy, .talk-copy { padding-bottom: 1.25rem; }
   }
 }
+
+/* Keep the homepage's two signature color fields aligned with archive_5. */
+@media screen {
+  .intent-section {
+    background: #3b302b;
+    color: #f6f1e8;
+  }
+  .intent-question, .intent-copy { color: #c6a98c; }
+  .intent-layout .intent-kicker { color: #4e7c82; }
+  .contact-band {
+    background: #4e7c82;
+    color: #f6f1e8;
+  }
+  .contact-band .text-link { color: #f6f1e8; }
+}
