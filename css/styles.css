@@ -661,6 +661,84 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
   .work-nav-wrap ~ #talks .feature-card .talk-thumb img { object-position: center 30%; }
 }
 
+/* CV reading experience: compact navigation and flexible document details. */
+@media screen {
+  .cv-choice-grid { align-items: stretch; }
+  .cv-choice { min-width: 0; }
+  .cv-section[id] { scroll-margin-top: 4.5rem; }
+  .cv-role-header, .cv-project-header, .cv-simple-item { min-width: 0; }
+  .cv-role-title, .cv-project-title, .cv-simple-main { min-width: 0; overflow-wrap: anywhere; }
+  .cv-contact a { overflow-wrap: anywhere; }
+  .cv-btn { min-height: 2.75rem; align-items: center; justify-content: center; text-align: center; }
+
+  @media (max-width: 900px) {
+    .cv-layout, .cv-document-layout { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+    .cv-layout > .cv-sidebar, .cv-document-layout > .cv-sidebar {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      align-self: stretch;
+      margin: 0;
+      padding: .25rem .35rem;
+      overflow: hidden;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(250,247,239,.97);
+    }
+    .cv-sidebar .cv-nav {
+      display: flex;
+      width: 100%;
+      flex-flow: row nowrap;
+      gap: .35rem;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overscroll-behavior-x: contain;
+      scroll-padding-inline: .5rem;
+      scroll-snap-type: x proximity;
+      scrollbar-width: none;
+      white-space: nowrap;
+    }
+    .cv-sidebar .cv-nav::-webkit-scrollbar { display: none; }
+    .cv-sidebar .cv-nav a {
+      display: inline-flex;
+      min-height: 2.75rem;
+      flex: 0 0 auto;
+      align-items: center;
+      padding: .4rem .65rem;
+      border: 0;
+      scroll-snap-align: start;
+    }
+    .cv-header, .cv-document-header { padding-top: 2.5rem; }
+    .cv-document-layout, .cv-layout { padding-top: .75rem; }
+    .cv-skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+    .cv-header .cv-contact, .cv-document-header .cv-contact { gap: .35rem .65rem; font-size: .85rem; }
+    .cv-header .cv-actions, .cv-document-header .cv-actions { gap: .55rem; margin-top: 1rem; }
+    .cv-header .cv-btn, .cv-document-header .cv-btn { flex: 1 1 11rem; min-width: 0; }
+  }
+
+  @media (max-width: 560px) {
+    .cv-choice-grid { gap: .8rem; }
+    .cv-choice { min-height: 0; padding: 1.35rem; }
+    .cv-choice h2 { font-size: clamp(1.8rem, 8vw, 2.35rem); }
+    .cv-document-layout { gap: .8rem; }
+    main .cv-layout { gap: .8rem; }
+    .cv-header, .cv-document-header { padding-top: 2rem; }
+    .cv-header .cv-name, .cv-document-header .cv-name { font-size: clamp(2.5rem, 12vw, 3.5rem); }
+    .cv-header .cv-title, .cv-document-header .cv-title { font-size: 1rem; line-height: 1.4; }
+    .cv-header .cv-profile, .cv-document-header .cv-profile { font-size: .9rem; line-height: 1.55; }
+    .cv-skills-grid { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+    .cv-section { margin-bottom: 1.5rem; padding-bottom: 1rem; }
+    .cv-section-title { margin-bottom: .75rem; }
+    .cv-role { margin-bottom: 1.25rem; }
+    .cv-role-dates, .cv-project-date, .cv-simple-meta { white-space: normal; }
+    .cv-role-header, .cv-project-header, .cv-simple-item { gap: .35rem; }
+    .cv-skill-tag { max-width: 100%; overflow-wrap: anywhere; }
+    .cv-bullets { padding-left: 1rem; }
+    .cv-bullets li { line-height: 1.55; }
+    .cv-header .cv-actions, .cv-document-header .cv-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  }
+}
+
 /* Keep the homepage's two signature color fields aligned with archive_5. */
 @media screen {
   .intent-section {
