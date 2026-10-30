@@ -661,6 +661,60 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
   .work-nav-wrap ~ #talks .feature-card .talk-thumb img { object-position: center 30%; }
 }
 
+/* Keep the featured project's image and copy in distinct, shrink-safe tracks. */
+@media screen {
+  .work-nav-wrap ~ #featured .featured-project-card {
+    display: grid;
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+    align-items: stretch;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+  }
+  .work-nav-wrap ~ #featured .featured-project-card > .project-image-wrap {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .work-nav-wrap ~ #featured .featured-project-card > .project-copy {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    min-width: 0;
+    align-self: center;
+    padding: clamp(1.25rem, 2.5vw, 2rem) 0;
+    overflow-wrap: anywhere;
+  }
+  .work-nav-wrap ~ #featured .featured-project-card .project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: 920px) {
+    .work-nav-wrap ~ #featured .featured-project-card {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+    }
+    .work-nav-wrap ~ #featured .featured-project-card > .project-image-wrap {
+      grid-column: 1;
+      grid-row: 1;
+      aspect-ratio: 16 / 10;
+    }
+    .work-nav-wrap ~ #featured .featured-project-card > .project-copy {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: start;
+      padding: 1.25rem 0 1.5rem;
+    }
+    .work-nav-wrap ~ #featured .featured-project-card .project-image { height: 100%; }
+  }
+}
+
 /* CV reading experience: compact navigation and flexible document details. */
 @media screen {
   .cv-choice-grid { align-items: stretch; }
