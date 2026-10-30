@@ -653,6 +653,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--terracotta); ou
   }
 }
 
+@media screen {
+  .work-nav-wrap ~ #talks .podcast-card .talk-thumb img {
+    object-fit: contain;
+    background: #37342e;
+  }
+  .work-nav-wrap ~ #talks .feature-card .talk-thumb img { object-position: center 30%; }
+}
+
 /* Keep the homepage's two signature color fields aligned with archive_5. */
 @media screen {
   .intent-section {
