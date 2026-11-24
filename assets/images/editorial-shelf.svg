@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="400" viewBox="0 0 260 400" fill="none">
+  <defs>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse"><path d="m0 7 7-7" stroke="#746454" stroke-width=".55" opacity=".3"/></pattern>
+    <g id="leaf" stroke="#5c6248" stroke-width="1" stroke-linejoin="round">
+      <path d="M0 0C-20-3-25-21-13-34 2-29 11-13 0 0Z" fill="#a7ac7e"/>
+      <path d="m0 0-13-34m9 23-10-5m7-3 7-6m-10-1-7-3"/>
+    </g>
+  </defs>
+  <g opacity=".25" stroke="#a65f49" stroke-width=".9" fill="#dbb298">
+    <path d="M157 5h67v21h-67Zm76 0h27v21h-27ZM189 34h71v21h-71Zm-59 0h50v21h-50Zm20 29h74v21h-74Zm83 0h27v21h-27Zm-46 29h73v21h-73Zm-49 0h40v21h-40Zm20 29h66v21h-66Zm75 0h27v21h-27Zm-50 29h77v21h-77Zm-45 0h36v21h-36Zm-19 29h105v21H119Zm114 0h27v21h-27Zm-47 29h74v21h-74Zm-40 0h31v21h-31Zm-7 29h85v21h-85Zm94 0h27v21h-27Zm-47 29h74v21h-74Zm-26 29h64v21h-64Zm73 0h27v21h-27Zm-31 29h58v21h-58Z"/>
+    <path d="m165 13 47-2m-14 32 50 2m-86 27h49m-13 27 50 4m-74 28 38 3m-18 27h50m-75 83 38 4m-11 29 52-1m-76 29h25" stroke-width=".6"/>
+  </g>
+  <g stroke="#655443" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M47 188v41l15 16v-57m0 42 28-42m110 0v41l15 16v-57m0 41 25-41" fill="#aa9378"/>
+    <path d="m51 200 6 5m-6 3 6 5m147-13 6 5m-6 4 6 5" stroke-width=".65"/>
+    <path d="M17 174 243 168l12 10-229 7Z" fill="#d0ad7e"/>
+    <path d="m26 185 229-7v12L26 197Z" fill="#bc966a"/>
+    <path d="m32 189 69-2m-38 6 67-3m11-5 59-2m-22 5 66-3M24 178l91-2m25-1 97-3" stroke-width=".65"/>
+    <path d="M62 115c-3 14-14 20-14 35 0 21 55 23 55 1 0-16-12-22-15-36l2-25-30 1Z" fill="#d4c4a7"/>
+    <path d="M62 116c7 6 18 5 26-1l4 13-8 9-9-6-9 11-13-4" fill="#79918c" stroke="none"/>
+    <ellipse cx="75" cy="91" rx="15" ry="3.5" fill="#a39279"/>
+    <path d="M60 144c-3 9 0 15 8 18m-10-15 3 12m34-16-3 15m-17 5 9-1" stroke-width=".65"/>
+    <path d="M25 143c1 18 8 27 25 27s26-10 27-27" fill="#e1cdb0"/>
+    <ellipse cx="51" cy="143" rx="26" ry="5" fill="#bb9d7a"/>
+    <ellipse cx="51" cy="144" rx="21" ry="2.5" fill="#8b7762"/>
+    <path d="m30 150 4 9m1-8 5 13m4-12 5 14m5-12 3 11m6-12 1 7" stroke-width=".6"/>
+    <path d="M156 128h56l-7 44c-11 7-30 6-41 0Z" fill="#b5b49c"/>
+    <ellipse cx="184" cy="128" rx="28" ry="5" fill="#7d8067"/>
+    <path d="m162 140 2 20m3-14 2 24m32-30-2 22m-29 8 19 2" stroke-width=".65"/>
+  </g>
+  <g stroke="#61694e" stroke-linecap="round" stroke-width="1.2">
+    <path d="M75 92C75 57 63 41 53 22m23 53c13-18 18-31 19-49M68 56C48 52 37 40 32 29m45 38c14-4 29-19 34-29"/>
+    <path d="M181 128c-3-25-24-45-14-68m17 68c10-24 32-32 37-56m-35 56c25 7 40 27 33 54s-28 44-23 69-9 47-24 58m13-181c-11 15-38 23-41 44s19 37 10 57"/>
+  </g>
+  <g fill="#a0a67d" stroke="#62674d" stroke-width=".9">
+    <path d="M57 31C39 30 36 18 44 10c12 0 17 9 13 21Zm12 23c-1-17 7-22 15-19 2 9-3 16-15 19ZM48 47C33 52 23 45 24 36c11-5 19 1 24 11Zm42 3c-4-15 2-24 11-25 6 10 1 20-11 25Zm9 6c5-15 16-20 23-13-1 10-9 15-23 13Z"/>
+  </g>
+  <use href="#leaf" transform="translate(171 91) rotate(-35)"/>
+  <use href="#leaf" transform="translate(178 115) rotate(70)"/>
+  <use href="#leaf" transform="translate(206 95) rotate(100)"/>
+  <use href="#leaf" transform="translate(216 143) rotate(67)"/>
+  <use href="#leaf" transform="translate(218 176) rotate(125)"/>
+  <use href="#leaf" transform="translate(206 204) rotate(-45)"/>
+  <use href="#leaf" transform="translate(196 234) rotate(55)"/>
+  <use href="#leaf" transform="translate(195 263) rotate(119) scale(.85)"/>
+  <use href="#leaf" transform="translate(183 293) rotate(-45) scale(.8)"/>
+  <use href="#leaf" transform="translate(170 312) rotate(47) scale(.7)"/>
+  <use href="#leaf" transform="translate(148 157) rotate(-44) scale(.85)"/>
+  <use href="#leaf" transform="translate(150 194) rotate(61) scale(.75)"/>
+  <use href="#leaf" transform="translate(155 225) rotate(125) scale(.65)"/>
+  <path d="M61 143c-3 13 1 18 8 21m24-25c6 17-4 22-11 24M166 146l4 24h28l3-25" stroke="url(#hatch)" stroke-width="10"/>
+</svg>
